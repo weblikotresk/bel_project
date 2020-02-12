@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="SHORTCUT ICON" href="img/icon.ico" type="image/x-icon">
+
+
+
+        <title>
+            Каталог достопрмиечательностей Белгородской области
+        </title>
+        
+        <link href="https://fonts.googleapis.com/css?family=Nunito|Ubuntu&display=swap" rel="stylesheet">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header id='header'>
+            <div class="header_flex">
+                <div class="logo_wrap">
+                   <a href="../index.html"> <img src="img/logo.png" alt="" class="logo"></a>
+             <h1 class='logo_headline'>Достопримечательности Белгородской области</h1>
+            </div>
+           <nav class='nav_header'>
+            <a class='nav_header_link' href='../index.html' >Главная страница</a>
+            <a class='nav_header_link'href=''>Каталог</a>
+            <a class='nav_header_link' href="../Routes_page/index_routes.html">Маршруты</a>
+            <a class='nav_header_link' href=''> О разработчике</a>
+           </nav>
+             </div>
+        </header>
+        <!--------------------NAVIGATION------------------>
+        <nav id='nav'>
+            <ul class="nav">
+                <h3 class='nav_headline'> Страница каталога</h3>
+                <a class='nav_element' href='#description'>Описание</a>
+                <a class='nav_element' href='#filter'>Фильтры</a>
+                <a class='nav_element' href='#catalog'>Каталог</a>
+            </ul>
+            <div id="filter">
+
+                    <h3 style="text-align: center" >Фильтры</h3>
+                    <svg class='close_btn' version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                    viewBox="0 0 371.23 371.23" style="enable-background:new 0 0 371.23 371.23;" xml:space="preserve"><g>
+               <polygon points="371.23,21.213 350.018,0 185.615,164.402 21.213,0 0,21.213 164.402,185.615 0,350.018 21.213,371.23 
+                   185.615,206.828 350.018,371.23 371.23,350.018 206.828,185.615 " />
+                   <rect class="close_click" x="0" y="0" width="400" height="400" onclick="closeit()" /></g>
+                    </svg>
+
+                    <div class="filter_wrap">
+
+                        <div class="filter_headline" onclick="chboxShow(0, this)">
+                            <h4>Открыто с</h4>
+                            <svg class="filter_arrow" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                viewBox="0 0 407.437 407.437" style="enable-background:new 0 0 407.437 407.437;" xml:space="preserve">
+                                <polygon points="386.258,91.567 203.718,273.512 21.179,91.567 0,112.815 203.718,315.87 407.437,112.815 "/>
+                            </svg> 
+                        </div>
+                        
+                        <div class="filter_checkboxes">
+                            <div class="checkbox open" onchange = 'backColor(this)'>
+                                <label class="control control-checkbox"   onclick='change()'>
+                                    Круглосуточно
+                                    <input type="checkbox" rel="open0">
+                                    <div class="control_indicator"></div>
+                                </label>
+                            </div>
+                            <div class="checkbox open" onchange = 'backColor(this)'>
+                                <label class="control control-checkbox"   onclick='change()'>
+                                    7:00
+                                    <input type="checkbox" rel="open7">
+                                    <div class="control_indicator"></div>
+                                </label>
+                            </div>
+                            <div class="checkbox open"  onchange = 'backColor(this)'>
+                                <label class="control control-checkbox" onclick='change()'>
+                                    8:00
+                                    <input type="checkbox" rel="open8">
+                                    <div class="control_indicator"   ></div>
+                                </label>
+                            </div>
+                            <div class="checkbox open"  onchange = 'backColor(this)'>
+                                <label class="control control-checkbox" onclick='change()'>
+                                    9:00
+                                    <input type="checkbox" rel="open9" >
+                                    <div class="control_indicator"  ></div>
+                                </label>
+                            </div>
+                            <div class="checkbox open"  onchange = 'backColor(this)'>
+                                <label class="control control-checkbox" onclick='change()'>
+                                    9:30
+                                    <input type="checkbox" rel="open930" >
+                                    <div class="control_indicator"  ></div>
+                                </label>
+                            </div>
+                            <div class="checkbox open"  onchange = 'backColor(this)'>
+                                <label class="control control-checkbox" onclick='change()'>
+                                    10:00
+                                    <input type="checkbox" rel="open10" >
+                                    <div class="control_indicator"  ></div>
+                                </label>
+                            </div>
+                            <div class="checkbox open"  onchange = 'backColor(this)'>
+                                <label class="control control-checkbox" onclick='change()'>
+                                    11:30
+                                    <input type="checkbox" rel="open1130" >
+                                    <div class="control_indicator"  ></div>
+                                </label>
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+                    <div class="filter_wrap">
+
+                        <div class="filter_headline" onclick="chboxShow(1, this)">
+                            <h4>Закрывается в </h4>
+                            <svg class="filter_arrow" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                viewBox="0 0 407.437 407.437" style="enable-background:new 0 0 407.437 407.437;" xml:space="preserve">
+                                <polygon points="386.258,91.567 203.718,273.512 21.179,91.567 0,112.815 203.718,315.87 407.437,112.815 "/>
+                            </svg> 
+                        </div>
+                        
+                        <div class="filter_checkboxes">
+                            <div class="checkbox close" onchange = 'backColor(this)'>
+                                <label class="control control-checkbox"   onclick='change()'>
+                                    14:00
+                                    <input type="checkbox" rel="close14">
+                                    <div class="control_indicator"></div>
+                                </label>
+                            </div>
+                            <div class="checkbox close" onchange = 'backColor(this)'>
+                                <label class="control control-checkbox"   onclick='change()'>
+                                    16:00
+                                    <input type="checkbox" rel="close16">
+                                    <div class="control_indicator"></div>
+                                </label>
+                            </div>
+                            <div class="checkbox close"  onchange = 'backColor(this)'>
+                                <label class="control control-checkbox" onclick='change()'>
+                                    17:00
+                                    <input type="checkbox" rel="close17">
+                                    <div class="control_indicator"   ></div>
+                                </label>
+                            </div>
+                            <div class="checkbox close"  onchange = 'backColor(this)'>
+                                <label class="control control-checkbox" onclick='change()'>
+                                    17:30
+                                    <input type="checkbox" rel="close1730" >
+                                    <div class="control_indicator"  ></div>
+                                </label>
+                            </div>
+                            <div class="checkbox close"  onchange = 'backColor(this)'>
+                                <label class="control control-checkbox" onclick='change()'>
+                                    18:00
+                                    <input type="checkbox" rel="close18" >
+                                    <div class="control_indicator"  ></div>
+                                </label>
+                            </div>
+                            <div class="checkbox close"  onchange = 'backColor(this)'>
+                                <label class="control control-checkbox" onclick='change()'>
+                                    19:00
+                                    <input type="checkbox" rel="close19" >
+                                    <div class="control_indicator"  ></div>
+                                </label>
+                            </div>
+                            <div class="checkbox close"  onchange = 'backColor(this)'>
+                                <label class="control control-checkbox" onclick='change()'>
+                                    Круглосуточно
+                                    <input type="checkbox" rel="close0" >
+                                    <div class="control_indicator"  ></div>
+                                </label>
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+                    <div class="filter_wrap">
+
+                        <div class="filter_headline" onclick="chboxShow(2, this)">
+                            <h4>Стоимость</h4>
+                            <svg class="filter_arrow" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                viewBox="0 0 407.437 407.437" style="enable-background:new 0 0 407.437 407.437;" xml:space="preserve">
+                                <polygon points="386.258,91.567 203.718,273.512 21.179,91.567 0,112.815 203.718,315.87 407.437,112.815 "/>
+                            </svg> 
+                        </div>
+                        
+                        <div class="filter_checkboxes">
+                            <div class="checkbox cost" onchange = 'backColor(this)'>
+                                <label class="control control-checkbox"   onclick='change()'>
+                                    Бесплатно
+                                    <input type="checkbox" rel="cost0">
+                                    <div class="control_indicator"></div>
+                                </label>
+                            </div>
+                            <div class="checkbox cost" onchange = 'backColor(this)'>
+                                <label class="control control-checkbox"   onclick='change()'>
+                                    90 рублей(тестовое значение)
+                                    <input type="checkbox" rel="cost90">
+                                    <div class="control_indicator"></div>
+                                </label>
+                            </div>
+        
+                        </div>
+                        
+                    </div>
+                    <div class="filter_wrap">
+
+                        <div class="filter_headline" onclick="chboxShow(3, this)">
+                            <h4>Местоположение</h4>
+                            <svg class="filter_arrow" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                viewBox="0 0 407.437 407.437" style="enable-background:new 0 0 407.437 407.437;" xml:space="preserve">
+                                <polygon points="386.258,91.567 203.718,273.512 21.179,91.567 0,112.815 203.718,315.87 407.437,112.815 "/>
+                            </svg> 
+                        </div>
+                        
+                        <div class="filter_checkboxes">
+                            <div class="checkbox place" onchange = 'backColor(this)'>
+                                <label class="control control-checkbox"   onclick='change()'>
+                                    Белгород
+                                    <input type="checkbox" rel="belgorod">
+                                    <div class="control_indicator"></div>
+                                </label>
+                            </div>
+                            <div class="checkbox place" onchange = 'backColor(this)'>
+                                <label class="control control-checkbox"   onclick='change()'>
+                                    Прохоровка
+                                    <input type="checkbox" rel="prohorovka">
+                                    <div class="control_indicator"></div>
+                                </label>
+                            </div>
+                            <div class="checkbox place" onchange = 'backColor(this)'>
+                                <label class="control control-checkbox"   onclick='change()'>
+                                    Старый Оскол
+                                    <input type="checkbox" rel="oskol">
+                                    <div class="control_indicator"></div>
+                                </label>
+                            </div>
+        
+                        </div>
+                        
+                    </div>
+                    <div class="filter_wrap">
+
+                        <div class="filter_headline" onclick="chboxShow(4, this)">
+                            <h4>Тематика</h4>
+                            <svg class="filter_arrow" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                viewBox="0 0 407.437 407.437" style="enable-background:new 0 0 407.437 407.437;" xml:space="preserve">
+                                <polygon points="386.258,91.567 203.718,273.512 21.179,91.567 0,112.815 203.718,315.87 407.437,112.815 "/>
+                            </svg> 
+                        </div>
+                        
+                        <div class="filter_checkboxes">
+                            <div class="checkbox theme" onchange = 'backColor(this)'>
+                                <label class="control control-checkbox"   onclick='change()'>
+                                    Религия
+                                    <input type="checkbox" rel="religion">
+                                    <div class="control_indicator"></div>
+                                </label>
+                            </div>
+                            <div class="checkbox theme" onchange = 'backColor(this)'>
+                                <label class="control control-checkbox"   onclick='change()'>
+                                    Культурно-значимые объекты
+                                    <input type="checkbox" rel="culture">
+                                    <div class="control_indicator"></div>
+                                </label>
+                            </div>
+                            <div class="checkbox theme" onchange = 'backColor(this)'>
+                                <label class="control control-checkbox"   onclick='change()'>
+                                    Музеи
+                                    <input type="checkbox" rel="museum">
+                                    <div class="control_indicator"></div>
+                                </label>
+                            </div>
+                            <div class="checkbox theme" onchange = 'backColor(this)'>
+                                <label class="control control-checkbox"   onclick='change()'>
+                                    Военное наследие
+                                    <input type="checkbox" rel="war">
+                                    <div class="control_indicator"></div>
+                                </label>
+                            </div>
+                            <div class="checkbox theme" onchange = 'backColor(this)'>
+                                <label class="control control-checkbox"   onclick='change()'>
+                                    Развлекательные места
+                                    <input type="checkbox" rel="amusement">
+                                    <div class="control_indicator"></div>
+                                </label>
+                            </div>
+                            <div class="checkbox theme" onchange = 'backColor(this)'>
+                                <label class="control control-checkbox"   onclick='change()'>
+                                    Парки, скверы
+                                    <input type="checkbox" rel="park">
+                                    <div class="control_indicator"></div>
+                                </label>
+                            </div>
+        
+                        </div>
+                        
+                    </div>
+            </div>
+        </nav>
+
+        <!--CONTENT-->
+        <article>
+            <div class="container">
+
+                <div id="description">
+                    <h2 class='home_page_headline'>Добро пожаловать на страницу 
+                    каталога достопримечательностей в Белгородской области!</h2>
+                    <p class='home_page_paragragh'>Данный перечень культурных мест края поможет вам с выбором направления
+                         своего путешествия в Белогорье. Для вашего удобства были составлены фильтры, которые облегчат поиск мест, интересных именно вам!
+                    </p>
+
+                </div>
+
+                <h3 class="filter_unwrap" onclick="filter_unwrap()">Фильтры</h3>
+
+                <div id="catalog">
+                    <div class="cost0 open0  close0 prohorovka religion">
+                        <a href="" class="item_headline">Звонница на Прохоровском поле</a>
+                        <div class="item_desc_wrap">
+                        <img src="img/items/item1.jpeg" alt="" class="item_image">
+                        
+                        <p class="item_desc">
+                             Находится данный мемориал в 2-х километрах 
+                             от поселка Прохоровка Белгородской области. 
+                             Место выбрано неслучайно: именно на этом поле 
+                             был переломный момент в Великой Отечественной войне,
+                              танковое сражение под Прохоровкой стало плацдармом в будущей победе.
+                        </p>
+                        </div>
+                        <ul class="item_subdesc">
+                            <li><span>Режим работы:</span> круглосуточно</li>
+                            <li><span>Цена за вход:</span> бесплатно</li>
+                            <li><span>Местоположение:</span> 
+                                <a href="https://goo.gl/maps/uvqCVrzE7knf5LpHA" >
+                                    Прохоровка, Белгородская обл.
+                                </a></li>
+                            
+                        </ul>
+                        <a href="" class="details">Подробнее</a>
+                    </div>
+                    <div class="cost0 open9  close18 oskol religion">
+                        <a href="" class="item_headline">Ильинская церковь</a>
+                        <div class="item_desc_wrap">
+                        <img src="img/items/ilyas_church.jpg" alt="" class="item_image">
+                        
+                        <p class="item_desc">
+
+                            Храм во имя Святого Пророка Ильи был построен на 
+                            средства прихожан в 
+                            1872 году в Ездоцкой слободе.
+                            <br>
+                            В советский период церковь не 
+                            закрывалась, 
+                            за исключением короткого периода, 
+                            по причине отсутствия священнослужителя. 
+                            <br>
+                            С 18 июля 1995 г. храм является памятником 
+                            архитектуры, построенным в эпоху эклектики. 
+                            Иконостас деревянный, с позолоченной резьбой, 
+                            cохранился в первозданном виде.
+                        </p>
+                        </div>
+                        <ul class="item_subdesc">
+                            <li><span>Режим работы:</span> с 9:00 до 18:00</li>
+                            <li><span>Цена за вход:</span> вход бесплатный</li>
+                            <li><span>Местоположение:</span> <a href="https://goo.gl/maps/GeVSMieopxtEe2Va6" >ул. Хмелева, 1, Старый Оскол, Белгородская обл.</a></li>
+                            
+                        </ul>
+                        <a href="" class="details">Подробнее</a>
+                    </div>
+                    <div class="cost901 open930  close18 close17 oskol museum">
+                        <a href="" class="item_headline">Старооскольский художественный музей</a>
+                        <div class="item_desc_wrap">
+                        <img src="img/items/hud_museum.jpg" alt="" class="item_image">
+                        
+                        <p class="item_desc">
+
+                            Музей создан на базе коллекции живописи и графики, 
+                            переданной московским живописным комбинатом, московской 
+                            дирекцией художественных выставок, Курской народной галереей 
+                            , Белгородским государственным музеем.
+
+                            Структура собрания художественного музея состоит из четырёх отделов: 
+                            живопись, графика, декоративно-прикладное искусство и скульптура. 
+                            Произведения позволяют проследить развитие в период с 
+                            1940-х гг. по настоящее время.
+                        </p>
+                        </div>
+                        <ul class="item_subdesc">
+                            <li><span>Режим работы:</span> С 9:30 до 18:00, в субботу до 17:00,<br> понедельник и воскресенье - выходной</li>
+                            <li><span>Цена за вход:</span> минимальная программа: 50 руб, максимальная - 150 руб </li>
+                            <li><span>Местоположение:</span> 
+                                <a href="https://goo.gl/maps/wJj2FcVSzGNmzP8c7" >
+                                    ул. Ленина, 57, Старый Оскол, Белгородская обл.
+                                </a></li>
+                            
+                        </ul>
+                        <a href="" class="details">Подробнее</a>
+                    </div>
+                    <div class="cost90 open1130 open11  close19 oskol culture">
+                        <a href="" class="item_headline">Старооскольский театр для детей и молодежи</a>
+                        <div class="item_desc_wrap">
+                        <img src="img/items/oskol_theatre.jpg" alt="" class="item_image">
+                        
+                        <p class="item_desc">
+                            Старооскольский театр для детей и молодежи
+                             — одна из действующих культурных площадок, 
+                             на основе которой проводится большое количество
+                              разноплановых мероприятий, служащих для интересного 
+                              проведения досуга в Старом Осколе.
+
+                            Это культурный центр, на базе которого 
+                            проводится работа с молодежью, создаются 
+                            музыкальные коллективы, организуются различного плана выставки.
+                        </p>
+                        </div>
+                        <ul class="item_subdesc">
+                            <li><span>Режим работы:</span> с 11:30 до 19:00, по выходным: с 11:00 до 19:00, перерыв с 14:00 до 15:00.<br> Понедельник - выходной.</li>
+                            <li><span>Цена за билет:</span>
+                                 <a href="https://quicktickets.ru/staryj-oskol-teatr" >
+                                уточняте в онлайн-кассе театра.
+                            </a></li>
+                            <li><span>Местоположение:</span> 
+                                <a href="https://goo.gl/maps/wJj2FcVSzGNmzP8c7" >
+                                    ул. Ленина, 57, Старый Оскол, Белгородская обл.
+                                </a></li>
+                            
+                        </ul>
+                        <a href="" class="details">Подробнее</a>
+                    </div>
+                    <div class="cost90 open10  close1730 close14 oskol museum">
+                        <a href="" class="item_headline">Старооскольский краеведческий музей</a>
+                        <div class="item_desc_wrap">
+                        <img src="img/items/oskol_local_museum.jpg" alt="" class="item_image">
+                        
+                        <p class="item_desc">
+                            Старооскольский краеведческий музей – одно из старейших учреждений культуры Белгородской области, он был основан 11 апреля 1923 года. 
+                            Его история неразрывно связана с историей города. 
+                            Музей представляет историю г. Старый Оскол во все исторические периоды.
+                             Большинство основных фондов музея - подлинники, что представляет наибольший интерес для посетителей.
+                        </div>
+                        <ul class="item_subdesc">
+                            <li><span>Режим работы:</span> С 10:00 до 17:30, в пятницу до 14:00,<br> понедельник и воскресенье - выходной</li>
+                            <li><span>Цена за вход:</span> минимальная программа: 50 руб, максимальная - 150 руб </li>
+                            <li><span>Местоположение:</span> 
+                                <a href="https://goo.gl/maps/wJj2FcVSzGNmzP8c7" >
+                                    ул. Ленина, 57, Старый Оскол, Белгородская обл.
+                                </a></li>
+                            
+                        </ul>
+                        <a href="" class="details">Подробнее</a>
+                    </div>
+                    <div class="cost0 open0  close0 oskol park">
+                        <a href="" class="item_headline">Парк Воинской славы</a>
+                        <div class="item_desc_wrap">
+                        <img src="img/items/oskol_victory_park.jpg" alt="" class="item_image">
+                        
+                        <p class="item_desc">
+                            Площадь и сквер у кинотеатра «Быль»  - одни из самых популярных мест у многих старооскольцев.
+                            Напротив площади Победы разбит длинный сквер, наполненный зеленью. Весь комплекс парковой зоны занимает более полукилометра. 
+                            10 сентября 2011 года — в день города —  на площади перед кинотеатром «Быль»
+                             была открыта стела «Старый Оскол. Город Воинской славы»,
+                             а на тумбах, окружающих стелу, кратко рассказано об истории города и старооскольцах, начиная с 17 века.
+                        </div>
+                        <ul class="item_subdesc">
+                            <li><span>Режим работы:</span> круглосуточно</li>
+                            <li><span>Цена за вход:</span> бесплатно </li>
+                            <li><span>Местоположение:</span> 
+                                <a href="https://goo.gl/maps/VTSBCp3AKTuqxrM46" >
+                                    ул. Жукова микрорайон, 38, Старый Оскол, Белгородская обл.
+                                </a></li>
+                            
+                        </ul>
+                        <a href="" class="details">Подробнее</a>
+                    </div>
+                    <div class="cost0 open8 open630  close19  oskol religion">
+                        <a href="" class="item_headline">Храм Сергия Радонежского</a>
+                        <div class="item_desc_wrap">
+                        <img src="img/items/oskol_chucrch.jpg" alt="" class="item_image">
+                        
+                        <p class="item_desc">
+                        Историческая справка: <br>
+                        17 июля 2007 года архиепископ Белгородский и Старооскольский Иоанн освятил 
+                        закладной камень на месте строительства будущего храма.
+                        
+
+                        21 июля 2010 года, в день обретения иконы Божией Матери «Казанская», 
+                        новый храм был увенчан пятью куполами и крестами. Одиннадцатитонный главный 
+                        купол был благополучно водружен на свое центральное место.
+
+                        29 августа 2010 года 
+                        состоялось освящение храма.
+ 
+
+                        </div>
+                        <ul class="item_subdesc">
+                            <li><span>Режим работы:</span> С 8:00 до 19:00, по выходным с 6:30</li>
+                            <li><span>Цена за вход:</span> бесплатно</li>
+                            <li><span>Местоположение:</span> 
+                                <a href="https://goo.gl/maps/8AeZGBFZRBiaACeE9" >
+                                    Дубрава микрорайон, 32 А, Старый Оскол, Белгородская обл.
+                                </a></li>
+                            
+                        </ul>
+                        <a href="" class="details">Подробнее</a>
+                    </div>
+                    <div class="cost0 open10  close16 oskol park">
+                        <a href="" class="item_headline">ООПТ Дендрологический парк "Ильины"</a>
+                        <div class="item_desc_wrap">
+                        <img src="img/items/oskol_dendro.jpg" alt="" class="item_image">
+                        
+                        <p class="item_desc">
+                            Дендропарк в хуторе Ильины был заложен в 1975 году в 75 квартале урочища «Заубля».
+
+                            Площадь дендропарка — 2,941 га.
+
+                            В дендропарке произрастают более 70 различных видов деревьев и кустарников, в их числе —
+
+                            экзотические для этой местности, завезенные из других климатических зон.
+                            Организовано движение автобуса, который доставляет посетителей к дендропарку.
+                        </div>
+                        <ul class="item_subdesc">
+                            <li><span>Режим работы:</span> С 10:00 до 16:00</li>
+                            <li><span>Цена за вход:</span> бесплатно </li>
+                            <li><span>Местоположение:</span> 
+                                <a href="https://goo.gl/maps/9fKhTk3DNT5K7Nu79" >
+                                    Лесная ул., 2, Ильины, Белгородская обл.
+                                </a></li>
+                            
+                        </ul>
+                        <a href="" class="details">Подробнее</a>
+                    </div>
+                    <div class="cost90 open9  close18 oskol museum">
+                        <a href="" class="item_headline">Дом-музей В.Я. Ерошенко</a>
+                        <div class="item_desc_wrap">
+                        <img src="img/items/oskol_eroshenko.jpg" alt="" class="item_image">
+                        
+                        <p class="item_desc">
+                            Литературно-мемориальный музей Василия Ерошенко 
+                            находится недалеко от города, 
+                            в селе Обуховка. Ерошенко был уникальным человеком. 
+                            Будучи незрячим с раннего детства, он овладел двенадцатью 
+                            языками и стал профессором Пекинского университета. 
+                            Был известен, как знаток японской литературы. 
+                            Интересен и его дом, который является памятником архитектуры.
+                            Экспозиция воссоздает внутреннее убранство дома зажиточного крестьянина конца XIX - начала XX веков.
+
+                        </div>
+                        <ul class="item_subdesc">
+                            <li><span>Режим работы:</span> С 9:00 до 18:00, в пятницу до 14:00,<br> понедельник - выходной.</li>
+                            <li><span>Цена за вход:</span> уточните по телефону (4725) 49-13-76. </li>
+                            <li><span>Местоположение:</span> 
+                                <a href="https://goo.gl/maps/9imuVvi2rRxznf4R6" >
+                                    ул. Ерошенко, 15, Старый Оскол, Белгородская обл.
+                                </a></li>
+                            
+                        </ul>
+                        <a href="" class="details">Подробнее</a>
+                    </div>
+                    <!-- Выставляю цены ниже -->
+                     <div class="cost50 open10  close22 belgorod park"> 
+                        <a href="" class="item_headline">Пикник-парк "Соломино"</a>
+                        <div class="item_desc_wrap">
+                        <img src="img/items/piknik_park.jpg" alt="" class="item_image">
+                        
+                        <p class="item_desc">
+                            «Пикник-парк» расположился вдали от 
+                            городской суеты и в то же время совсем 
+                            рядом с городом, в районе новой объездной 
+                            дороги между поселком Разумное и селом Соломино. 
+                            
+
+                            Это благоустроенная зона отдыха с 
+                            развитой инфраструктурой. Беседки с 
+                            мангалами, пляж с лежаками и волейбольной 
+                            площадкой, веревочный парк, детский городок, 
+                            соломенный лабиринт, кардиотрасса, она же тропинка 
+                            для скандинавской ходьбы, и арбалетный тир.
+                        </div>
+                        <ul class="item_subdesc">
+                            <li><span>Режим работы:</span> С 10:00 до 18:00</li>
+                            <li><span>Стоимость услуг:</span> от 50 руб. до 8000 руб.</li>
+                            <li><span>Местоположение:</span> 
+                                <a href="https://goo.gl/maps/jWi94SQCWgTUTzJK7" >
+                                    ул, Дальняя Тихая ул., д. 2П, Белгород
+                                </a></li>
+                            
+                        </ul>
+                        <a href="" class="details">Подробнее</a>
+                    </div>
+                    <div class="cost50 open10  close21 belgorod amusement">
+                        <a href="" class="item_headline">Белгородский Зоопарк</a>
+                        <div class="item_desc_wrap">
+                        <img src="img/items/belgorod_zoo.jpg" alt="" class="item_image">
+                        
+                        <p class="item_desc">
+                            Территория комплекса занимает 25 гектаров и вмещает 43
+                             экспозиции для животных с просторными уличными выгулами
+                              и отапливаемыми помещениями для зимовки. Для водоплавающих
+                               птиц обустроено большое искусственное озеро, с водной гладью
+                                около 2-х гектаров.
+
+                            Пешеходные маршруты пролегают через несколько географических зон – 
+                            согласно естественным ареалам обитания животных: Дальний Восток, 
+                            русский Север, Европу, Азию, Америку и Австралию. В отдельную зону 
+                            выделены животные, проживающие в Белгородской области.
+                        </div>
+                        <ul class="item_subdesc">
+                            <li><span>Режим работы:</span> С 10:00 до 21:00<br> понедельник - выходной</li>
+                            <li><span>Стоимость услуг:</span> минимальная программа: 50 руб., индивидуальная экскурсия - 2000 руб. </li>
+                            <li><span>Местоположение:</span> 
+                                <a href="https://goo.gl/maps/hovkFQFbQAGxM1CL6" >
+                                    ул. Волчанская, 292в, Белгород
+                                </a></li>
+                            
+                        </ul>
+                        <a href="" class="details">Подробнее</a>
+                    </div>
+                    <div class="cost90 open13  close22  belgorod museum">
+                        <a href="" class="item_headline">
+                            Контактный музей средневекового военного дела</a>
+                        <div class="item_desc_wrap">
+                        <img src="img/items/middle_age_belgorod.jpg" alt="" class="item_image">
+                        
+                        <p class="item_desc">
+            
+                            Музей проводит лекции о культуре вооружения, быта, способов ведения боя людей Высокого Средневековья.
+                            Посетители смогут не только потрогать все имеющиеся экспонаты, но так же и сфотографироваться в них. 
+                            С оружием можно свободно контактировать, а из лука даже можно выстрелить!
+                            Можно послушать, как звучали средневековые музыкальные инструменты.
+                            Для детей имеется мини городок с макетами зданий и кораблей.
+                            Проект выиграл президентский грант.
+                        </div>
+                        <ul class="item_subdesc">
+                            <li><span>Режим работы:</span> С 13:00 до 22:00</li>
+                            <li><span>Стоимость услуг:</span> взрослый билет - 500 руб., детский - 300 руб.; участие в экскурсии - 250 руб. с человека. <br> <strong> Необходима предварительная запись.</strong> </li>
+                            <li><span>Местоположение:</span> 
+                                <a href="https://goo.gl/maps/qLdN2HsqN4KfJams6" >
+                                    ул. Князя Трубецкого, дом 52, Белгород
+                                </a></li>
+                            
+                        </ul>
+                        <a href="" class="details">Подробнее</a>
+                    </div>
+                    <div class="cost0 open0  close0 belgorod culture">
+                        <a href="" class="item_headline">Стела «Город воинской славы»</a>
+                        <div class="item_desc_wrap">
+                        <img src="img/items/belgorod_stela.jpg" alt="" class="item_image">
+                        
+                        <p class="item_desc">
+                            Стела «Город Белгород – город воинской славы» находится на центральной площади Белгорода. 
+
+                            5 августа 2013 года, в день 70-летия освобождения Белгорода от 
+                            немецко-фашистских захватчиков на Соборной площади состоялось 
+                            торжественное открытие памятника-стелы «Город воинской славы».
+
+                             На четырех стелах, расположенных возле основного монумента,
+                            размещены художественные рельефы, на которых
+                             запечатлены основные вехи ратной истории города.
+                        </div>
+                        <ul class="item_subdesc">
+                            <li><span>Режим работы:</span> круглосуточно</li>
+                            <li><span>Цена за вход:</span> бесплатно</li>
+                            <li><span>Местоположение:</span> 
+                                <a href="https://goo.gl/maps/6BxoxTigeE2xBCg18" >
+                                    пл. Соборная, 1, Белгород
+                                </a></li>
+                            
+                        </ul>
+                        <a href="" class="details">Подробнее</a>
+                    </div>
+                    <div class="cost0 open0  close0 belgorod park">
+                        <a href="" class="item_headline">Парк Победы</a>
+                        <div class="item_desc_wrap">
+                        <img src="img/items/victory_park_belgorod.jpg" alt="" class="item_image">
+                        
+                        <p class="item_desc">
+                            Парк Победы, расположенный на берегу реки Везелка. 
+                            Он привлекателен и для местных жителей, и для туристов: 
+                            первые любят просто прогуливаться по его дорожкам в вечернее время, 
+                            а вторые с интересом осматривают достопримечательности, коих здесь немало.
+                        </div>
+                        <ul class="item_subdesc">
+                            <li><span>Режим работы:</span> круглосуточно</li>
+                            <li><span>Цена за вход:</span> бесплатно </li>
+                            <li><span>Местоположение:</span> 
+                                <a href="https://goo.gl/maps/huDDQBPZRbyUFKyE7" >
+                                    ул. Победы, 81, Белгород
+                                </a></li>
+                            
+                        </ul>
+                        <a href="" class="details">Подробнее</a>
+                    </div>
+                    <div class="cost0 open0  close0 prohorovka culture war">
+                        <a href="" class="item_headline">Вечный огонь</a>
+                        <div class="item_desc_wrap">
+                        <img src="img/items/proh_fire.jpg" alt="" class="item_image">
+                        
+                        <p class="item_desc">
+                            Братская могила и мемориал «Вечный огонь» 
+                            советским воинам, погибшим в боях с фашистскими 
+                            захватчиками. Расположены в центре посёлка Прохоровка. 
+                            В братскую могилу в 1950 г. перенесены останки из братских 
+                            могил хуторов: Мордовки, Кусты, Ямки, Лутово, Липовка, 
+                            Тихая Падина, ул. 1-я Масловка,  в 1952 году похороненных
+                             на западной окраине пгт. Прохоровка, с. Правороть, х. Сторожевое и в 1966 г. из х. Грушки.
+                        </div>
+                        <ul class="item_subdesc">
+                            <li><span>Режим работы:</span> круглосуточно</li>
+                            <li><span>Цена за вход:</span> бесплатно </li>
+                            <li><span>Местоположение:</span> 
+                                <a href="https://goo.gl/maps/fiLoSvkBmixeBcNaA" >
+                                    Советская ул., Прохоровка, Белгородская обл.
+                                </a></li>
+                            
+                        </ul>
+                        <a href="" class="details">Подробнее</a>
+                    </div>
+                    <div class="cost80 open8  close18 prohorovka war">
+                        <a href="" class="item_headline">Танкодром</a>
+                        <div class="item_desc_wrap">
+                        <img src="img/items/proh_tanks.jpg" alt="" class="item_image">
+                        
+                        <p class="item_desc">
+                            
+                            Трасса Танкодрома составляет 1,2 га. 
+                             Подобные открытые площадки
+                             для демонстрации технических возможностей 
+                             бронетехники существуют лишь в Англии и Чехии.
+
+                            У Прохоровского танкодрома
+                             в наличии действующие единицы 
+                             бронетехники: бронетранспортер 
+                             БТР-70, БМП-1 – боевая машина пехоты, 
+                             БРДМ-2 – бронированная разведовательно-дозорная машина, 
+                             боевая машина десанта БМД-2 и бронеавтомобиль БА-64. 
+
+
+
+                        </div>
+                        <ul class="item_subdesc">
+                            <li><span>Режим работы:</span> С 8:00 до 18:00</li>
+                            <li><span>Стоимость услуг:</span>  <a href="http://xn----ctbjbwiqaaccdifcs7d.xn--p1ai/index.php/2012-01-10-07-48-46/16484--q-q.html">ознакомьтесь с перечнем услуг на официальном сайте </a> </li>
+                            <li><span>Местоположение:</span> 
+                                <a href="https://goo.gl/maps/2aSn3ZAfLu6B5QNr7" >
+                                    Прохоровка, Белгородская обл., 309000
+                                </a></li>
+                            
+                        </ul>
+                        <a href="" class="details">Подробнее</a>
+                    </div>
+                    <div class="cost80 open10  close18 prohorovka war culture">
+                        <a href="" class="item_headline">Музей “Третье ратное поле России”</a>
+                        <div class="item_desc_wrap">
+                        <img src="img/items/proh_third.jpg" alt="" class="item_image">
+                        
+                        <p class="item_desc">
+                            
+
+                             2 мая 2010 года распахнул свои двери музей «Третье ратное поле России». 
+                             Это явилось знаменательным событием не только для Белгородчины, 
+                             но и всей России в целом. Введён в эксплуатацию современный музейный 
+                             комплекс общей площадью 5000 кв.м. Он составляет единый архитектурный 
+                             ансамбль с Петропавловским храмом и культурно-историческим центром 
+                             «Третье ратное поле России «Прохоровское поле». Архитектурной доминантой 
+                             при этом остаётся храм Первоверховных апостолов Петра и Павла.
+
+
+
+                        </div>
+                        <ul class="item_subdesc">
+                            <li><span>Режим работы:</span> С 10:00 до 18:00, понедельник - выходной</li>
+                            <li><span>Стоимость услуг:</span>   <a href="http://xn----ctbjbwiqaaccdifcs7d.xn--p1ai/index.php/2012-01-10-07-48-46/16484--q-q.html">ознакомьтесь с перечнем услуг на официальном сайте </a> </li>
+                            <li><span>Местоположение:</span> 
+                                <a href="https://goo.gl/maps/6cTyX6V8L1rSd19W9">
+                                    Парковая ул., 47, Прохоровка, Белгородская обл.
+                                </a></li>
+                            
+                        </ul>
+                        <a href="" class="details">Подробнее</a>
+                    </div>
+                    <div class="cost80 open10  close17 prohorovka war culture">
+                        <a href="" class="item_headline">Музей бронетанковой техники</a>
+                        <div class="item_desc_wrap">
+                        <img src="img/items/proh_tank_museum.jpg" alt="" class="item_image">
+                        
+                        <p class="item_desc">
+                            
+                            Общая площадь Музея составляет 2830 кв.м, экспозиционная 1500 кв.м.
+
+                            Основная цель экспозиции – воссоздание полной картины развития и 
+                            истории танкостроения от периода античности и средневековья до наших дней.
+
+                            В Музее бронетанковой техники экспозиция и интерьеры гармонично
+                             сочетаются с экспонатами. Экспозиция расположилась в 4-х залах.
+
+                        </div>
+                        <ul class="item_subdesc">
+                            <li><span>Режим работы:</span> С 10:00 до 17:00, понедельник - выходной</li>
+                            <li><span>Стоимость услуг:</span>   <a href="http://xn----ctbjbwiqaaccdifcs7d.xn--p1ai/index.php/2012-01-10-07-48-46/16484--q-q.html">ознакомьтесь с перечнем услуг на официальном сайте </a> </li>
+                            <li><span>Местоположение:</span> 
+                                <a href="https://goo.gl/maps/5ofHRRTF8NgnsvgYA">
+                                    Парковая ул., 47, Прохоровка, Белгородская обл.
+                                </a></li>
+                            
+                        </ul>
+                        <a href="" class="details">Подробнее</a>
+                    </div>
+                    <div class="cost80 open10  close18 close20 prohorovka war religion">
+                        <a href="" class="item_headline">
+                            Музей-заповедник «Прохоровское поле»</a>
+                        <div class="item_desc_wrap">
+                        <img src="img/items/proh_park.jpg" alt="" class="item_image">
+                        
+                        <p class="item_desc">
+                            
+                            Это многофункциональный комплекс, объединяющий различные объекты, 
+                            служащие увековечиванию и популяризации подвига, совершенного 
+                            во времена Великой Отечественной войны. В районе Прохоровского 
+                            поля 12 июля 1943 года произошло одно из крупнейших за всю историю 
+                            танковых сражений. Прохоровское поле как место сражения является
+                             третьим ратным полем России после Куликова поля и Бородинского.
+
+                        </div>
+                        <ul class="item_subdesc">
+                            <li><span>Режим работы:</span> С 10:00 до 18:00, в пятницу до 20:00; <br> понедельник - выходной</li>
+                            <li><span>Стоимость услуг:</span>   <a href="http://xn----ctbjbwiqaaccdifcs7d.xn--p1ai/index.php/2012-01-10-07-48-46/16484--q-q.html">ознакомьтесь с перечнем услуг на официальном сайте </a> </li>
+                            <li><span>Местоположение:</span> 
+                                <a href="https://goo.gl/maps/5ofHRRTF8NgnsvgYA">
+                                    Парковая ул., 47, Прохоровка, Белгородская обл.
+                                </a></li>
+                            
+                        </ul>
+                        <a href="" class="details">Подробнее</a>
+                    </div>
+
+                </div>
+
+            </div>
+        </article>
+        
+
+
+
+        <!--------------------SIDE------------------>
+
+         <div id="side">
+            <img src="img/up_button.svg" alt="" class="anchor_button" style="top: 25px;">
+            <img src="img/down_button.svg" alt="" class="anchor_button">
+        </div>
+        <footer id='footer'>
+
+
+                <div class="footer_section">
+                    
+                    <div class="nav_footer">
+                    <a class='footer_nav_element' href='#description'>Описание</a>
+                    <a class='footer_nav_element' href='#filter'>Фильтры</a>
+                    <a class='footer_nav_element' href='#catalog'>Каталог</a>
+                    </div>
+                </div>
+                <div class="footer_section">
+                    
+                    <nav class='nav_footer'>
+                        <a class='footer_nav_element' href='../index.html'>Главная страница</a>
+                        <a class='footer_nav_element' href=''>Каталог</a>
+                        <a class='footer_nav_element' href="Routes_page/index_routes.html">Маршруты</a>
+                        <a class='footer_nav_element' href=''>О разработчике</a>
+                       </nav>
+                </div>
+                <div class="footer_icons">
+                    <h2 class="footer_section_headline">Интересно? Поделись с друзьями!</h2>
+                    
+                        <!-- AddToAny BEGIN -->
+                        <nav class="icons_wrap">
+                        <a class="footer_link" href="https://www.addtoany.com/share#url=https%3A%2F%2Fepiclybruh.000webhostapp.com%2F&amp;title=" target="_blank"><img src="https://static.addtoany.com/buttons/a2a.svg" width="32" height="32"  style="background-color:#4e9ef3"></a>
+                        <a class="footer_link" href="https://www.addtoany.com/add_to/vk?linkurl=https%3A%2F%2Fepiclybruh.000webhostapp.com%2F&amp;linkname=" target="_blank"><img src="https://static.addtoany.com/buttons/vk.svg" width="32" height="32" style="background-color:#4e9ef3"></a>
+                        <a class="footer_link" href="https://www.addtoany.com/add_to/twitter?linkurl=https%3A%2F%2Fepiclybruh.000webhostapp.com%2F&amp;linkname=" target="_blank"><img src="https://static.addtoany.com/buttons/twitter.svg" width="32" height="32" style="background-color:#4e9ef3"></a>
+                        <a class="footer_link" href="https://www.addtoany.com/add_to/facebook?linkurl=https%3A%2F%2Fepiclybruh.000webhostapp.com%2F&amp;linkname=" target="_blank"><img src="https://static.addtoany.com/buttons/facebook.svg" width="32" height="32" style="background-color:#4e9ef3"></a>
+                        <a  class="footer_link"href="https://www.addtoany.com/add_to/email?linkurl=https%3A%2F%2Fepiclybruh.000webhostapp.com%2F&amp;linkname=" target="_blank"><img src="https://static.addtoany.com/buttons/email.svg" width="32" height="32"style="background-color:#4e9ef3"></a>
+                        <a  class="footer_link"href="https://www.addtoany.com/add_to/copy_link?linkurl=https%3A%2F%2Fepiclybruh.000webhostapp.com%2F&amp;linkname=" target="_blank"><img src="https://static.addtoany.com/buttons/link.svg" width="32" height="32"style="background-color:#4e9ef3"></a>
+                        </nav>
+                        <!-- AddToAny END -->                        
+                    
+                    
+                </div>
+
+            <!--</div>-->
+        </footer>
+        <script src="script.js"></script>
+        <script src="../script.js"></script>
+    </body>
+</html>
+
+
