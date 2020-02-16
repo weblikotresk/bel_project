@@ -1,4 +1,4 @@
-/*font-family: 'Ubuntu', sans-serif;
+/*font-family: 'Source Sans Pro', sans-serif;
 font-family: 'Nunito', sans-serif;*/
 /*-----------------GENERALS---------------------*/
 #header{
@@ -54,9 +54,12 @@ body{
 
 .header_flex{
     display:flex;
+    height: 88%;
     flex-flow: row wrap;
     justify-content: space-around;
     align-items: center; 
+    background: url("img/backgroundv41.png") no-repeat center / cover;
+
 }
 .logo_wrap{
     height:86px; 
@@ -70,17 +73,23 @@ body{
 .logo:hover{
     cursor: pointer;
 }
+.home_page_headline, .logo_headline{
+    font-family: 'Source Sans Pro', sans-serif;
+}
 .logo_headline{
     font-size:32px;
-    border-left: 2px solid #dbdbdb;
+    border-left: 2px solid #f5f5f5ec;
     padding: 0 0 0 7px;
     display: inline-block;
+    color: #4d4d4d;
+    
 }
 
 .nav_header_link{
+    background-color: rgba(255, 255, 255, 0.25);
     text-decoration: none;
     color: #000;
-    border-bottom: 1px solid #74afed;
+    border-bottom: 1px solid #48b9ff;
     border-radius:37px;
     padding: 10px 15px;
     width: 100%;
@@ -95,7 +104,7 @@ body{
 }
 
 .nav_header_link:hover{
-    background-color: #74afed;
+    background-color: #48b9ff;
     color: white;
     transition: .17s all ease;
 }
@@ -112,14 +121,15 @@ body{
 }
 
 .nav_element:hover{
-    background-color: #74afed;
+    background-color: #48b9ff;
     color: white;
     transition: .17s all ease;
 }
 
 /*-----------------------ARTICLE----------------------*/
+
 .home_page_paragragh{
-    font-family: 'Ubuntu', sans-serif;
+
     font-size:1.2rem;
     text-align: left;
     line-height: 1.5rem;
@@ -152,7 +162,7 @@ body{
 /*----------------------Transport---------------------------*/
 .link{
     text-decoration: none;
-    color:#74afed;
+    color:#48b9ff;
     
 }
 
@@ -308,7 +318,7 @@ body{
 
 @media screen and (max-width:760px){
     .header_flex{
-        margin-top: 15px;
+        padding-top: 15px;
     }
     .logo_wrap{
         margin-bottom: 25px;
@@ -321,7 +331,6 @@ body{
         width: 400px;
         text-align: left;
         padding-left: 10px;
-        border-left: 2px solid #dbdbdb;
     }
     .nav_header_link{
         margin: 0 5px 5px 0;
@@ -425,7 +434,7 @@ body{
         margin-right: 10px;
         background-color: #fff;
         text-align: center;
-        border-bottom: 1px solid #74afed;
+        border-bottom: 1px solid #48b9ff;
         border-radius: 1px;
         display: inline-block;
         vertical-align: 50%;
@@ -484,7 +493,7 @@ body{
         font-size: 1.2rem;/*!!!!!!!!!!!*/
     }
     .header_flex{
-        margin-top: 15px;
+        padding-top: 15px;
     }
     .home_page_paragragh{
         font-size: 1em;

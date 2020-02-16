@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="SHORTCUT ICON" href="img/icon.ico" type="image/x-icon">
+        <link rel="SHORTCUT ICON" href="../img/icon.ico" type="image/x-icon">
 
 
 
@@ -9,16 +9,18 @@
             Каталог достопрмиечательностей Белгородской области
         </title>
         
-        <link href="https://fonts.googleapis.com/css?family=Nunito|Ubuntu&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Nunito|Source+Sans+Pro&display=swap" rel="stylesheet">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width">
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
+        
         <header id='header'>
+            
             <div class="header_flex">
                 <div class="logo_wrap">
-                   <a href="../index.html"> <img src="img/logo.png" alt="" class="logo"></a>
+                   <a href="../index.html"> <img src="../img/logo.png" alt="" class="logo"></a>
              <h1 class='logo_headline'>Достопримечательности Белгородской области</h1>
             </div>
            <nav class='nav_header'>
@@ -40,8 +42,9 @@
             <div id="filter">
 
                     <h3 style="text-align: center" >Фильтры</h3>
+
                     <svg class='close_btn' version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                    viewBox="0 0 371.23 371.23" style="enable-background:new 0 0 371.23 371.23;" xml:space="preserve"><g>
+                    viewBox="0 0 371.23 371.23" style="enable-background:new 0 0 371.23 371.23;" xml:space="preserve" ><g>
                <polygon points="371.23,21.213 350.018,0 185.615,164.402 21.213,0 0,21.213 164.402,185.615 0,350.018 21.213,371.23 
                    185.615,206.828 350.018,371.23 371.23,350.018 206.828,185.615 " />
                    <rect class="close_click" x="0" y="0" width="400" height="400" onclick="closeit()" /></g>
@@ -297,6 +300,7 @@
                         </div>
                         
                     </div>
+                    <a class="filter_clear" onclick="filter_clear()">Сбросить фильтры</a>
             </div>
         </nav>
 
@@ -317,9 +321,9 @@
 
                 <div id="catalog">
                     <div class="cost0 open0  close0 prohorovka religion">
-                        <a href="" class="item_headline">Звонница на Прохоровском поле</a>
+                        <a href= "../items/zvonniza/index.html" class="item_headline">Звонница на Прохоровском поле</a>
                         <div class="item_desc_wrap">
-                        <img src="img/items/item1.jpeg" alt="" class="item_image">
+                        <img src="items/item1.jpeg" alt="" class="item_image">
                         
                         <p class="item_desc">
                              Находится данный мемориал в 2-х километрах 
@@ -338,12 +342,12 @@
                                 </a></li>
                             
                         </ul>
-                        <a href="" class="details">Подробнее</a>
+                        <a href="../items/zvonniza/index.html" class="details">Подробнее</a>
                     </div>
                     <div class="cost0 open9  close18 oskol religion">
-                        <a href="" class="item_headline">Ильинская церковь</a>
+                        <a href="../items/ilin_church/index.html" class="item_headline">Ильинская церковь</a>
                         <div class="item_desc_wrap">
-                        <img src="img/items/ilyas_church.jpg" alt="" class="item_image">
+                        <img src="items/ilyas_church.jpg" alt="" class="item_image">
                         
                         <p class="item_desc">
 
@@ -368,12 +372,12 @@
                             <li><span>Местоположение:</span> <a href="https://goo.gl/maps/GeVSMieopxtEe2Va6" >ул. Хмелева, 1, Старый Оскол, Белгородская обл.</a></li>
                             
                         </ul>
-                        <a href="" class="details">Подробнее</a>
+                        <a href="../items/ilin_church/index.html" class="details">Подробнее</a>
                     </div>
                     <div class="cost901 open930  close18 close17 oskol museum">
-                        <a href="" class="item_headline">Старооскольский художественный музей</a>
+                        <a href="../items/hud_museum/index.html" class="item_headline">Старооскольский художественный музей</a>
                         <div class="item_desc_wrap">
-                        <img src="img/items/hud_museum.jpg" alt="" class="item_image">
+                        <img src="items/hud_museum.jpg" alt="" class="item_image">
                         
                         <p class="item_desc">
 
@@ -397,12 +401,12 @@
                                 </a></li>
                             
                         </ul>
-                        <a href="" class="details">Подробнее</a>
+                        <a href="../items/hud_museum/index.html" class="details">Подробнее</a>
                     </div>
                     <div class="cost90 open1130 open11  close19 oskol culture">
-                        <a href="" class="item_headline">Старооскольский театр для детей и молодежи</a>
+                        <a href="../items/oskol_theatre/index.html" class="item_headline">Старооскольский театр для детей и молодежи</a>
                         <div class="item_desc_wrap">
-                        <img src="img/items/oskol_theatre.jpg" alt="" class="item_image">
+                        <img src="items/oskol_theatre.jpg" alt="" class="item_image">
                         
                         <p class="item_desc">
                             Старооскольский театр для детей и молодежи
@@ -428,12 +432,12 @@
                                 </a></li>
                             
                         </ul>
-                        <a href="" class="details">Подробнее</a>
+                        <a href="../items/oskol_theatre/index.html" class="details">Подробнее</a>
                     </div>
                     <div class="cost90 open10  close1730 close14 oskol museum">
-                        <a href="" class="item_headline">Старооскольский краеведческий музей</a>
+                        <a href="../items/oskol_local_museum/index.html" class="item_headline">Старооскольский краеведческий музей</a>
                         <div class="item_desc_wrap">
-                        <img src="img/items/oskol_local_museum.jpg" alt="" class="item_image">
+                        <img src="items/oskol_local_museum.jpg" alt="" class="item_image">
                         
                         <p class="item_desc">
                             Старооскольский краеведческий музей – одно из старейших учреждений культуры Белгородской области, он был основан 11 апреля 1923 года. 
@@ -450,12 +454,12 @@
                                 </a></li>
                             
                         </ul>
-                        <a href="" class="details">Подробнее</a>
+                        <a href="../items/oskol_local_museum/index.html" class="details">Подробнее</a>
                     </div>
                     <div class="cost0 open0  close0 oskol park">
-                        <a href="" class="item_headline">Парк Воинской славы</a>
+                        <a href="../items/victory_park/index.html" class="item_headline">Парк Воинской славы</a>
                         <div class="item_desc_wrap">
-                        <img src="img/items/oskol_victory_park.jpg" alt="" class="item_image">
+                        <img src="items/oskol_victory_park.jpg" alt="" class="item_image">
                         
                         <p class="item_desc">
                             Площадь и сквер у кинотеатра «Быль»  - одни из самых популярных мест у многих старооскольцев.
@@ -473,43 +477,44 @@
                                 </a></li>
                             
                         </ul>
-                        <a href="" class="details">Подробнее</a>
+                        <a href="../items/victory_park/index.html" class="details">Подробнее</a>
                     </div>
-                    <div class="cost0 open8 open630  close19  oskol religion">
-                        <a href="" class="item_headline">Храм Сергия Радонежского</a>
+                    <div class="cost0  open7  close19  oskol religion">
+                        <a href="../items/oskol_church/index.html" class="item_headline">Храм Рождества Христова</a>
                         <div class="item_desc_wrap">
-                        <img src="img/items/oskol_chucrch.jpg" alt="" class="item_image">
+                        <img src="items/oskol_church.jpg" alt="" class="item_image">
                         
                         <p class="item_desc">
-                        Историческая справка: <br>
-                        17 июля 2007 года архиепископ Белгородский и Старооскольский Иоанн освятил 
-                        закладной камень на месте строительства будущего храма.
-                        
+                            Закладной камень на месте строительства храма был
+                             освящен Высокопреосвященнейшим архиепископом Белгородским
+                              и Старооскольским Иоанном 18 сентября 1999 года. 
+                              Строительство его начато в мае 2000 года. 
+                              
+                              Храм построен на средства Международного фонда «Поколение».
+                            
+                            9 сентября 2003 года храм освящен Высокопреосвященнейшим архиепископом 
+                            Белгородским и Старооскольским Иоанном (Поповым).
+                            
 
-                        21 июля 2010 года, в день обретения иконы Божией Матери «Казанская», 
-                        новый храм был увенчан пятью куполами и крестами. Одиннадцатитонный главный 
-                        купол был благополучно водружен на свое центральное место.
-
-                        29 августа 2010 года 
-                        состоялось освящение храма.
+                            
  
 
                         </div>
                         <ul class="item_subdesc">
-                            <li><span>Режим работы:</span> С 8:00 до 19:00, по выходным с 6:30</li>
+                            <li><span>Режим работы:</span> С 7:00 до 19:00</li>
                             <li><span>Цена за вход:</span> бесплатно</li>
                             <li><span>Местоположение:</span> 
-                                <a href="https://goo.gl/maps/8AeZGBFZRBiaACeE9" >
-                                    Дубрава микрорайон, 32 А, Старый Оскол, Белгородская обл.
+                                <a href="https://goo.gl/maps/WHrqM531BmEzoUpv5" >
+                                    ул. Рождественский микрорайон, 1, Старый Оскол
                                 </a></li>
                             
                         </ul>
-                        <a href="" class="details">Подробнее</a>
+                        <a href="../items/oskol_church/index.html" class="details">Подробнее</a>
                     </div>
                     <div class="cost0 open10  close16 oskol park">
-                        <a href="" class="item_headline">ООПТ Дендрологический парк "Ильины"</a>
+                        <a href="../items/oskol_dendro/index.html" class="item_headline">ООПТ Дендрологический парк "Ильины"</a>
                         <div class="item_desc_wrap">
-                        <img src="img/items/oskol_dendro.jpg" alt="" class="item_image">
+                        <img src="items/oskol_dendro.jpg" alt="" class="item_image">
                         
                         <p class="item_desc">
                             Дендропарк в хуторе Ильины был заложен в 1975 году в 75 квартале урочища «Заубля».
@@ -530,12 +535,12 @@
                                 </a></li>
                             
                         </ul>
-                        <a href="" class="details">Подробнее</a>
+                        <a href="../items/oskol_dendro/index.html" class="details">Подробнее</a>
                     </div>
                     <div class="cost90 open9  close18 oskol museum">
-                        <a href="" class="item_headline">Дом-музей В.Я. Ерошенко</a>
+                        <a href="../items/oskol_eroshenko/index.html" class="item_headline">Дом-музей В.Я. Ерошенко</a>
                         <div class="item_desc_wrap">
-                        <img src="img/items/oskol_eroshenko.jpg" alt="" class="item_image">
+                        <img src="items/oskol_eroshenko.jpg" alt="" class="item_image">
                         
                         <p class="item_desc">
                             Литературно-мемориальный музей Василия Ерошенко 
@@ -557,13 +562,13 @@
                                 </a></li>
                             
                         </ul>
-                        <a href="" class="details">Подробнее</a>
+                        <a href="../items/oskol_eroshenko/index.html" class="details">Подробнее</a>
                     </div>
                     <!-- Выставляю цены ниже -->
                      <div class="cost50 open10  close22 belgorod park"> 
                         <a href="" class="item_headline">Пикник-парк "Соломино"</a>
                         <div class="item_desc_wrap">
-                        <img src="img/items/piknik_park.jpg" alt="" class="item_image">
+                        <img src="items/piknik_park.jpg" alt="" class="item_image">
                         
                         <p class="item_desc">
                             «Пикник-парк» расположился вдали от 
@@ -593,7 +598,7 @@
                     <div class="cost50 open10  close21 belgorod amusement">
                         <a href="" class="item_headline">Белгородский Зоопарк</a>
                         <div class="item_desc_wrap">
-                        <img src="img/items/belgorod_zoo.jpg" alt="" class="item_image">
+                        <img src="items/belgorod_zoo.jpg" alt="" class="item_image">
                         
                         <p class="item_desc">
                             Территория комплекса занимает 25 гектаров и вмещает 43
@@ -622,7 +627,7 @@
                         <a href="" class="item_headline">
                             Контактный музей средневекового военного дела</a>
                         <div class="item_desc_wrap">
-                        <img src="img/items/middle_age_belgorod.jpg" alt="" class="item_image">
+                        <img src="items/middle_age_belgorod.jpg" alt="" class="item_image">
                         
                         <p class="item_desc">
             
@@ -647,7 +652,7 @@
                     <div class="cost0 open0  close0 belgorod culture">
                         <a href="" class="item_headline">Стела «Город воинской славы»</a>
                         <div class="item_desc_wrap">
-                        <img src="img/items/belgorod_stela.jpg" alt="" class="item_image">
+                        <img src="items/belgorod_stela.jpg" alt="" class="item_image">
                         
                         <p class="item_desc">
                             Стела «Город Белгород – город воинской славы» находится на центральной площади Белгорода. 
@@ -674,7 +679,7 @@
                     <div class="cost0 open0  close0 belgorod park">
                         <a href="" class="item_headline">Парк Победы</a>
                         <div class="item_desc_wrap">
-                        <img src="img/items/victory_park_belgorod.jpg" alt="" class="item_image">
+                        <img src="items/victory_park_belgorod.jpg" alt="" class="item_image">
                         
                         <p class="item_desc">
                             Парк Победы, расположенный на берегу реки Везелка. 
@@ -696,7 +701,7 @@
                     <div class="cost0 open0  close0 prohorovka culture war">
                         <a href="" class="item_headline">Вечный огонь</a>
                         <div class="item_desc_wrap">
-                        <img src="img/items/proh_fire.jpg" alt="" class="item_image">
+                        <img src="items/proh_fire.jpg" alt="" class="item_image">
                         
                         <p class="item_desc">
                             Братская могила и мемориал «Вечный огонь» 
@@ -721,7 +726,7 @@
                     <div class="cost80 open8  close18 prohorovka war">
                         <a href="" class="item_headline">Танкодром</a>
                         <div class="item_desc_wrap">
-                        <img src="img/items/proh_tanks.jpg" alt="" class="item_image">
+                        <img src="items/proh_tanks.jpg" alt="" class="item_image">
                         
                         <p class="item_desc">
                             
@@ -754,7 +759,7 @@
                     <div class="cost80 open10  close18 prohorovka war culture">
                         <a href="" class="item_headline">Музей “Третье ратное поле России”</a>
                         <div class="item_desc_wrap">
-                        <img src="img/items/proh_third.jpg" alt="" class="item_image">
+                        <img src="items/proh_third.jpg" alt="" class="item_image">
                         
                         <p class="item_desc">
                             
@@ -784,7 +789,7 @@
                     <div class="cost80 open10  close17 prohorovka war culture">
                         <a href="" class="item_headline">Музей бронетанковой техники</a>
                         <div class="item_desc_wrap">
-                        <img src="img/items/proh_tank_museum.jpg" alt="" class="item_image">
+                        <img src="items/proh_tank_museum.jpg" alt="" class="item_image">
                         
                         <p class="item_desc">
                             
@@ -812,7 +817,7 @@
                         <a href="" class="item_headline">
                             Музей-заповедник «Прохоровское поле»</a>
                         <div class="item_desc_wrap">
-                        <img src="img/items/proh_park.jpg" alt="" class="item_image">
+                        <img src="items/proh_park.jpg" alt="" class="item_image">
                         
                         <p class="item_desc">
                             
@@ -847,8 +852,8 @@
         <!--------------------SIDE------------------>
 
          <div id="side">
-            <img src="img/up_button.svg" alt="" class="anchor_button" style="top: 25px;">
-            <img src="img/down_button.svg" alt="" class="anchor_button">
+            <img src="../img/up_button.svg" alt="" class="anchor_button" style="top: 25px;">
+            <img src="../img/down_button.svg" alt="" class="anchor_button">
         </div>
         <footer id='footer'>
 
@@ -866,7 +871,7 @@
                     <nav class='nav_footer'>
                         <a class='footer_nav_element' href='../index.html'>Главная страница</a>
                         <a class='footer_nav_element' href=''>Каталог</a>
-                        <a class='footer_nav_element' href="Routes_page/index_routes.html">Маршруты</a>
+                        <a class='footer_nav_element' href="../Routes_page/index_routes.html">Маршруты</a>
                         <a class='footer_nav_element' href=''>О разработчике</a>
                        </nav>
                 </div>
@@ -885,6 +890,9 @@
                         <!-- AddToAny END -->                        
                     
                     
+                </div>
+                <div class="footer_rights">
+                    Copyright © Владислав Климов 2020. Все права защищены.
                 </div>
 
             <!--</div>-->

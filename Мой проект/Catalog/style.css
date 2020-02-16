@@ -20,7 +20,7 @@ font-family: 'Nunito', sans-serif;*/
 #footer{
     grid-area: footer;
     box-shadow: 0px -9px 37px -22px rgba(77,77,77,1);
-    background: url("img/footer/footer3.jpg") no-repeat center / cover;
+    background: url("../img/footer/footer3.jpg") no-repeat center / cover;
     margin: 0;
     height: 300px;
     color: white;
@@ -54,7 +54,10 @@ body{
     flex-flow: row wrap;
     justify-content: space-around;
     align-items: center; 
-    margin: 0 25px;
+    background: url("../img/backgroundv41.png") no-repeat center / cover;
+}
+.home_page_headline, .logo_headline{
+    font-family: 'Source Sans Pro', sans-serif;
 }
 .logo_wrap{
     height:86px; 
@@ -70,15 +73,17 @@ body{
 }
 .logo_headline{
     font-size:32px;
-    border-left: 2px solid #dbdbdb;
+    border-left: 2px solid #f5f5f5ec;
     padding: 0 0 0 7px;
     display: inline-block;
+    color: #4d4d4d;
 }
 
 .nav_header_link{
+    background-color: rgba(255, 255, 255, 0.25);
     text-decoration: none;
     color: #000;
-    border-bottom: 1px solid #74afed;
+    border-bottom: 1px solid #48b9ff;
     border-radius:37px;
     padding: 10px 15px;
     width: 100%;
@@ -93,7 +98,7 @@ body{
 }
 
 .nav_header_link:hover{
-    background-color: #74afed;
+    background-color: #48b9ff;
     color: white;
     transition: .17s all ease;
 }
@@ -133,7 +138,7 @@ body{
 }
 
 .nav_element:hover{
-    background-color: #74afed;
+    background-color: #48b9ff;
     color: white;
     transition: .17s all ease;
 }
@@ -152,7 +157,7 @@ body{
 #catalog > div{
     position: relative;
     margin: 0 10px 25px;
-    border: 1px solid #dbdbdb;
+    border: 1px solid #f5f5f5ec;
     border-radius: 10px;
     -webkit-box-shadow: 0px 0px 2px 2px rgba(219,219,219,0.29);
     -moz-box-shadow: 0px 0px 2px 2px rgba(219,219,219,0.29);
@@ -166,12 +171,12 @@ body{
     text-decoration: none;
     color: black;
     display: block;
-    text-decoration-color: #74afed;
+    text-decoration-color: #48b9ff;
 }
 .item_headline:hover{
     transition: .17s all ease;
     text-decoration: underline;
-    text-decoration-color: #74afed;
+    text-decoration-color: #48b9ff;
 }
 .item_desc_wrap{
     display: flex;
@@ -201,7 +206,7 @@ body{
     text-decoration: none;
 }
 .item_subdesc > li > a:hover{
-    border-bottom: 1px solid #74afed;
+    border-bottom: 1px solid #48b9ff;
 }
 
 .details{
@@ -213,13 +218,13 @@ body{
     border-radius: 5px;
     padding: 5px 8px;
     color: black;
-    border: 1px solid #74afed;
+    border: 1px solid #48b9ff;
     text-decoration: none;
 }
 
 
 .details:hover{
-    background-color: #74afed;
+    background-color: #48b9ff;
     color: white;
     transition: .17s all ease;
 }
@@ -238,14 +243,14 @@ body{
     display: none;
     margin: 0 10px 10px;
     padding: 10px;
-    border-bottom: 1px solid #74afed ;
+    border-bottom: 1px solid #48b9ff ;
     background-color: #74aeedaf;
     color: #fff;
     border-radius: 10px;
 }
 .filter_unwrap:hover{
     transition: .17s all ease;
-    background-color: #74afed;
+    background-color: #48b9ff;
 }
 .filter_arrow{
     height: 25px;
@@ -263,7 +268,7 @@ body{
 }
 .filter_headline{
     position: relative;
-    border: 1px solid #dbdbdb;
+    border: 1px solid #f5f5f5ec;
     -webkit-box-shadow: 0px 0px 2px 2px rgba(219,219,219,0.29);
     -moz-box-shadow: 0px 0px 2px 2px rgba(219,219,219,0.29);
     box-shadow: 0px 2px 2px 2px rgba(219,219,219,0.29);
@@ -274,14 +279,29 @@ body{
 }
 .filter_wrap:hover{
     transition: .17s all ease;
-    border-bottom: 1px solid #74afed;
+    border-bottom: 1px solid #48b9ff;
 }
-
+.filter_clear{
+    cursor: pointer;
+    display: block;
+    padding: 10px 0;
+    text-align: center;
+    border: 1px solid #48b9ff;
+    -webkit-box-shadow: 0px 0px 2px 2px rgba(219,219,219,0.29);
+    -moz-box-shadow: 0px 0px 2px 2px rgba(219,219,219,0.29);
+    box-shadow: 0px 2px 2px 2px rgba(219,219,219,0.29);
+    border-radius: 4px;
+}
+.filter_clear:hover{
+    background-color: #48b9ff;
+    color: white;
+    transition: all .25s ease;
+}
 
 .filter_checkboxes{
     display: none;
     flex-direction: column;
-    border: 1px solid #dbdbdb;
+    border: 1px solid #f5f5f5ec;
     padding: 10px;
     border-top-style: none;
     -webkit-box-shadow: 0px 0px 2px 2px rgba(219,219,219,0.29);
@@ -312,7 +332,7 @@ body.closed:after{
 }
 .close_btn{
     position: absolute;
-    width: 15px;
+    width: 20px;
     top: 23px;
     right: 20px;
     display: none; /* в медийке block*/
@@ -344,7 +364,7 @@ body.closed:after{
     }
 .control_indicator {
     position: absolute;
-    top: 2.5px;
+    top: 15%;
     left: 4px;
     height: 20px;
     width: 20px;
@@ -358,7 +378,7 @@ body.closed:after{
 }
 
 .control input:checked ~ .control_indicator {
-    background: #74afed;
+    background: #48b9ff;
 }
 .control:hover input:not([disabled]):checked ~ .control_indicator,
 .control input:checked:focus ~ .control_indicator {
@@ -437,13 +457,16 @@ body.closed:after{
     transition: all .2s ease;
 }
 
-.footer_icons{
+.footer_icons, .footer_rights{
     width: 100%;
     padding-bottom: 10px;
     background-color: #474747;
     
 }
-
+.footer_rights{
+    color: #6d6d6d;
+    text-align: center;
+}
 .icons_wrap{
     margin: 0 auto;
     flex-direction: row;
@@ -451,6 +474,7 @@ body.closed:after{
     display: flex;
     width: 33%;
 }
+
 
 /*--------------------Media_Queries----------------*/
 @media screen and (min-width:1100px){
@@ -511,7 +535,7 @@ body.closed:after{
         margin-right: 10px;
         background-color: #fff;
         text-align: center;
-        border-bottom: 1px solid #74afed;
+        border-bottom: 1px solid #48b9ff;
         border-radius: 1px;
         display: inline-block;
         vertical-align: 50%;
@@ -538,6 +562,9 @@ body.closed:after{
     .close_btn{
         display: block;
     }
+    .filter_clear{
+        margin: 0 15px;
+    }
 
 }
 
@@ -553,7 +580,7 @@ body.closed:after{
         width: 400px;
         text-align: left;
         padding-left: 10px;
-        border-left: 2px solid #dbdbdb;
+        border-left: 2px solid #f5f5f5ec;
     }
     .nav{
         display: none;
@@ -568,7 +595,7 @@ body.closed:after{
 }
 @media screen and (max-width:760px){
     .header_flex{
-        margin-top: 15px;
+        padding-top: 15px;
     }
     
     .nav_header_link{
@@ -619,7 +646,7 @@ body.closed:after{
     }
   
     .header_flex{
-        margin-top: 15px;
+        padding-top: 15px;
     }
     .home_page_paragragh{
         font-size: 1em;

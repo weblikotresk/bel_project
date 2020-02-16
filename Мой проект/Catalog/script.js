@@ -1,5 +1,6 @@
-let body = document.getElementsByTagName('body')[0];
-let filter = document.getElementById('filter');
+let body = document.getElementsByTagName('body')[0],
+filter = document.getElementById('filter'),
+global_hidden_Elems=0,global_checkboxes=[];
 
 function closeit(){
   body.classList.remove('closed');
@@ -25,8 +26,6 @@ function filter_unwrap(){
 }
 
 function backColor(elem){
-  let text = document.querySelectorAll(elem >' label');
-
   if(elem.style.background == "rgba(116, 175, 237, 0.3)"){
     elem.style.background = '#fff';
     
@@ -53,7 +52,7 @@ else{
 
     arrow[elem].style.transform = "rotate(180deg)";
     arrow[elem].style.fill='#fff';
-    head.style.backgroundColor = 'rgba(116, 175, 237, 0.8)';
+    head.style.backgroundColor = '#48b9ffc4';
     head.style.color='white';
 
 
@@ -66,7 +65,7 @@ function change() {
         closeArr = document.querySelectorAll("div.close >label >   input[type=checkbox]"),
         placeArr = document.querySelectorAll("div.place >label >  input[type=checkbox]"),
         themeArr = document.querySelectorAll("div.theme >label >  input[type=checkbox]");
-        console.log(costArr, openArr, closeArr, placeArr);
+        global_checkboxes = global_checkboxes.concat(costArr, openArr, closeArr, placeArr, themeArr);
     let filters = {
       cost: getClassOfCheckedCheckboxes(costArr),
       open: getClassOfCheckedCheckboxes(openArr),
@@ -97,7 +96,9 @@ function getClassOfCheckedCheckboxes(checkboxes) {
 }
 
 function filterResults(filters) {
+  
   let rElems = document.querySelectorAll("#catalog > div");
+
   let hiddenElems = [];
 
   if (!rElems || rElems.length <= 0) {
@@ -207,4 +208,23 @@ function filterResults(filters) {
   for (let i = 0; i < hiddenElems.length; i++) {
     hiddenElems[i].style.display = "none";
   }
+  global_hidden_Elems = hiddenElems;
+  
+}
+function filter_clear(){
+  let controlArr = document.getElementsByClassName('checkbox');
+  controlArr = Array.from(controlArr); 
+  console.log(controlArr);
+  for(let i = 0; i<global_checkboxes.length; i++){
+    global_checkboxes[i].forEach((item)=>{
+      item.checked = false;
+      
+    })
+    
+  }
+  controlArr.forEach(item=>
+    item.style.backgroundColor = "#fff"
+  )
+  return change();
+  
 }

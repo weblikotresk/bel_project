@@ -56,7 +56,8 @@ body{
     display:flex;
     flex-flow: row wrap;
     justify-content: space-around;
-    align-items: center; 
+    align-items: center;
+    background: url("../img/backgroundv41.png") no-repeat center / cover; 
 }
 .logo_wrap{
     height:86px; 
@@ -261,12 +262,21 @@ body{
     display: flex;
     width: 33%;
 }
-
+.footer_rights{
+    color: #6d6d6d;
+    text-align: center;
+}
+.footer_icons, .footer_rights{
+    width: 100%;
+    padding-bottom: 10px;
+    background-color: #474747;
+    
+}
 /*--------------------Media_Queries----------------*/
 
 @media screen and (max-width:760px){
     .header_flex{
-        margin-top: 15px;
+        padding-top: 15px;
     }
     .logo_wrap{
         margin-bottom: 25px;
@@ -402,7 +412,7 @@ body{
         font-size: 1.2rem;/*!!!!!!!!!!!*/
     }
     .header_flex{
-        margin-top: 15px;
+        padding-top: 15px;
     }
     .home_page_paragragh{
         font-size: 1em;
