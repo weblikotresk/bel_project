@@ -313,6 +313,16 @@ body{
     display: flex;
     width: 33%;
 }
+.footer_rights{
+    color: #6d6d6d;
+    text-align: center;
+}
+.footer_icons, .footer_rights{
+    width: 100%;
+    padding-bottom: 10px;
+    background-color: #474747;
+    
+}
 
 /*--------------------Media_Queries----------------*/
 
