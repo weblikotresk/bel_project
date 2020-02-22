@@ -343,7 +343,21 @@ body.closed:after{
     fill-opacity:0;
     stroke-opacity:0;
   }
+/*============================Catalog_Search=====================*/
+input{
+    width: 96.5%;
+    height: 35px;
+    padding-left: 10px;
+    border-radius: 5px;
+    display: block;
+      margin: 15px auto;  
 
+}
+ #error{
+    width: 96.5%;
+    margin: 15px auto; 
+    font-size: 22px;
+} 
 /*--------------------CheckboxStyle------------------*/
 
 
@@ -564,6 +578,9 @@ body.closed:after{
     }
     .filter_clear{
         margin: 0 15px;
+    }
+    #error{
+        margin: 0 auto;
     }
 
 }

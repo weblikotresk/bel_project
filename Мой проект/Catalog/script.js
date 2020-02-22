@@ -1,12 +1,53 @@
 let body = document.getElementsByTagName('body')[0],
 filter = document.getElementById('filter'),
-global_hidden_Elems=0,global_checkboxes=[];
+global_hidden_Elems=0,global_checkboxes=[],
+errorblock = document.getElementById('error');
+errorblock.hidden = true;
+//Функция поиска
+document.querySelector("#search_form").oninput= function(){
 
+  let headlines = document.getElementsByClassName("item_headline");
+  let blocks = document.querySelectorAll('#catalog > div');
+  //console.log(global_hidden_Elems.includes(blocks[0]));
+  let val = this.value.split(' ').join('').toLowerCase();
+  if(val != ''){
+    for(let i = 0; i< headlines.length; i++){
+      if(headlines[i].innerText.toLowerCase().includes(val)
+       && global_hidden_Elems!=0 && global_hidden_Elems.includes(blocks[i]) == false
+       ){
+        blocks[i].style.display = 'block';
+      }
+      else if(headlines[i].innerText.toLowerCase().includes(val)
+      && global_hidden_Elems ==0){
+        blocks[i].style.display = 'block';
+       }
+       else{
+        blocks[i].style.display = 'none';
+       }
+    }
+    
+  }else if(global_checkboxes != []){
+    blocks.forEach((item)=>{
+      item.style.display = 'block';
+    });
+    return change();
+  }
+  else{
+    blocks.forEach((item)=>{
+      item.style.display = 'block';
+    })
+    errorblock.hidden = true;
+  }
+   if(Array.from(blocks).every(item => item.hidden == true)){
+     errorblock.hidden = false;
+    }
+  }
+//закрыть фильтры
 function closeit(){
   body.classList.remove('closed');
   filter.removeAttribute('style');
 }
-
+//открыть фильтры
 function filter_unwrap(){
     let wrap = document.getElementById('filter');
     if(body.classList.contains('closed')){
@@ -34,6 +75,7 @@ function backColor(elem){
 
   }
 }  
+//открыть подзаголовок фильтров
 function chboxShow(elem, head){
   
   let chboxes = document.querySelectorAll('.filter_checkboxes'),
@@ -58,6 +100,10 @@ else{
 
 }
 }
+
+
+//фильтрация
+
 function change() {
 
     let costArr =document.querySelectorAll("div.cost >label  > input[type=checkbox]"),

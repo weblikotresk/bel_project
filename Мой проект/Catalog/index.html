@@ -204,8 +204,31 @@
                             </div>
                             <div class="checkbox cost" onchange = 'backColor(this)'>
                                 <label class="control control-checkbox"   onclick='change()'>
-                                    90 рублей(тестовое значение)
-                                    <input type="checkbox" rel="cost90">
+                                    50 рублей
+                                    <input type="checkbox" rel="cost50">
+                                    <div class="control_indicator"></div>
+                                </label>
+                            </div>
+                            
+                            <div class="checkbox cost" onchange = 'backColor(this)'>
+                                <label class="control control-checkbox"   onclick='change()'>
+                                    100 рублей
+                                    <input type="checkbox" rel="cost100">
+                                    <div class="control_indicator"></div>
+                                </label>
+                            </div>
+                            
+                            <div class="checkbox cost" onchange = 'backColor(this)'>
+                                <label class="control control-checkbox"   onclick='change()'>
+                                    250
+                                    <input type="checkbox" rel="cost250">
+                                    <div class="control_indicator"></div>
+                                </label>
+                            </div>
+                            <div class="checkbox cost" onchange = 'backColor(this)'>
+                                <label class="control control-checkbox"   onclick='change()'>
+                                    Цена варьируется
+                                    <input type="checkbox" rel="costnot">
                                     <div class="control_indicator"></div>
                                 </label>
                             </div>
@@ -329,9 +352,9 @@
                     </p>
 
                 </div>
-
+                <input type="text" placeholder="Поиск по каталогу" id="search_form">
                 <h3 class="filter_unwrap" onclick="filter_unwrap()">Фильтры</h3>
-
+                
                 <div id="catalog">
                     <div class="cost0 open0  close0 prohorovka religion">
                         <a href= "../items/zvonniza/index.html" class="item_headline">Звонница на Прохоровском поле</a>
@@ -387,7 +410,7 @@
                         </ul>
                         <a href="../items/ilin_church/index.html" class="details">Подробнее</a>
                     </div>
-                    <div class="cost901 open930  close18 close17 oskol museum">
+                    <div class="cost100 open930  close18 close17 oskol museum">
                         <a href="../items/hud_museum/index.html" class="item_headline">Старооскольский художественный музей</a>
                         <div class="item_desc_wrap">
                         <img src="items/hud_museum.jpg" alt="" class="item_image">
@@ -416,7 +439,7 @@
                         </ul>
                         <a href="../items/hud_museum/index.html" class="details">Подробнее</a>
                     </div>
-                    <div class="cost90 open1130 open11  close19 oskol culture">
+                    <div class="costnot open1130 open11  close19 oskol culture">
                         <a href="../items/oskol_theatre/index.html" class="item_headline">Старооскольский театр для детей и молодежи</a>
                         <div class="item_desc_wrap">
                         <img src="items/oskol_theatre.jpg" alt="" class="item_image">
@@ -447,7 +470,7 @@
                         </ul>
                         <a href="../items/oskol_theatre/index.html" class="details">Подробнее</a>
                     </div>
-                    <div class="cost90 open10  close1730 close14 oskol museum">
+                    <div class="cost50 open10  close1730 close14 oskol museum">
                         <a href="../items/oskol_local_museum/index.html" class="item_headline">Старооскольский краеведческий музей</a>
                         <div class="item_desc_wrap">
                         <img src="items/oskol_local_museum.jpg" alt="" class="item_image">
@@ -507,10 +530,6 @@
                             
                             9 сентября 2003 года храм освящен Высокопреосвященнейшим архиепископом 
                             Белгородским и Старооскольским Иоанном (Поповым).
-                            
-
-                            
- 
 
                         </div>
                         <ul class="item_subdesc">
@@ -550,7 +569,7 @@
                         </ul>
                         <a href="../items/oskol_dendro/index.html" class="details">Подробнее</a>
                     </div>
-                    <div class="cost90 open9  close18 oskol museum">
+                    <div class="costnot open9  close18 oskol museum">
                         <a href="../items/oskol_eroshenko/index.html" class="item_headline">Дом-музей В.Я. Ерошенко</a>
                         <div class="item_desc_wrap">
                         <img src="items/oskol_eroshenko.jpg" alt="" class="item_image">
@@ -577,7 +596,6 @@
                         </ul>
                         <a href="../items/oskol_eroshenko/index.html" class="details">Подробнее</a>
                     </div>
-                    <!-- Выставляю цены ниже -->
                      <div class="cost50 open10  close22 belgorod park"> 
                         <a href="../items/picnic_park/index.html" class="item_headline">Пикник-парк "Соломино"</a>
                         <div class="item_desc_wrap">
@@ -636,7 +654,7 @@
                         </ul>
                         <a href="../items/belgorod_zoo/index.html" class="details">Подробнее</a>
                     </div>
-                    <div class="cost90 open13  close22  belgorod museum">
+                    <div class="cost250 open13  close22  belgorod museum">
                         <a href="../items/middle_age_belgorod/index.html" class="item_headline">
                             Контактный музей средневекового военного дела</a>
                         <div class="item_desc_wrap">
@@ -736,7 +754,7 @@
                         </ul>
                         <a href="../items/proh_fire/index.html" class="details">Подробнее</a>
                     </div>
-                    <div class="cost80 open8  close18 prohorovka war">
+                    <div class="costnot open8  close18 prohorovka war">
                         <a href="../items/proh_tanks/index.html" class="item_headline">Танкодром</a>
                         <div class="item_desc_wrap">
                         <img src="items/proh_tanks.jpg" alt="" class="item_image">
@@ -769,7 +787,7 @@
                         </ul>
                         <a href="../items/proh_tanks/index.html" class="details">Подробнее</a>
                     </div>
-                    <div class="cost80 open10  close18 prohorovka war culture">
+                    <div class="cost100 costnot open10  close18 prohorovka war culture">
                         <a href="../items/proh_third/index.html" class="item_headline">Музей “Третье ратное поле России”</a>
                         <div class="item_desc_wrap">
                         <img src="items/proh_third.jpg" alt="" class="item_image">
@@ -799,7 +817,7 @@
                         </ul>
                         <a href="../items/proh_third/index.html" class="details">Подробнее</a>
                     </div>
-                    <div class="cost80 open10  close17 prohorovka war culture">
+                    <div class="costnot open10  close17 prohorovka war culture">
                         <a href="../items/proh_tank_museum/index.html" class="item_headline">Музей бронетанковой техники</a>
                         <div class="item_desc_wrap">
                         <img src="items/proh_tank_museum.jpg" alt="" class="item_image">
@@ -826,7 +844,7 @@
                         </ul>
                         <a href="../items/proh_tank_museum/index.html" class="details">Подробнее</a>
                     </div>
-                    <div class="cost80 open10  close18 close20 prohorovka war religion">
+                    <div class="costnot open10  close18 close20 prohorovka war religion">
                         <a href="../items/proh_park/index.html" class="item_headline">
                             Музей-заповедник «Прохоровское поле»</a>
                         <div class="item_desc_wrap">
@@ -935,7 +953,10 @@
                         <a href="../items/lenin_park/index.html" class="details">Подробнее</a>
                     </div>
                 </div>
-
+                <div id="error">
+                    <h5>Простите, но по вашему запросу ничего не найдено.</h5>
+                    <h6>Попробуйте изменить ваш запрос и попробуйте снова.</h6>
+                </div>
             </div>
         </article>
         
@@ -990,8 +1011,9 @@
 
             <!--</div>-->
         </footer>
-        <script src="script.js"></script>
+        
         <script src="../script.js"></script>
+        <script src="script.js"></script>
     </body>
 </html>
 
