@@ -153,6 +153,15 @@ body{
 #description{
     margin-bottom: 15px;
 }
+.link{
+    color: #48b9ff;
+    transition: all .2 ease;
+    text-decoration: none;
+}
+.link:hover{
+    color: #009dff;
+
+}
 /*--------------------------Item_style--------------------------*/
 #item{
     border: 1px solid #dbdbdb7a;

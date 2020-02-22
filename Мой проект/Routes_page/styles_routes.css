@@ -71,17 +71,22 @@ body{
 .logo:hover{
     cursor: pointer;
 }
+.home_page_headline, .logo_headline, .route_headline{
+    font-family: 'Source Sans Pro', sans-serif;
+}
 .logo_headline{
     font-size:32px;
-    border-left: 2px solid #dbdbdb;
+    border-left: 2px solid #f5f5f5ec;
     padding: 0 0 0 7px;
     display: inline-block;
+    color: #4d4d4d;
+    
 }
-
 .nav_header_link{
+    background-color: rgba(255, 255, 255, 0.25);
     text-decoration: none;
     color: #000;
-    border-bottom: 1px solid #74afed;
+    border-bottom: 1px solid #48b9ff;
     border-radius:37px;
     padding: 10px 15px;
     width: 100%;
@@ -96,7 +101,7 @@ body{
 }
 
 .nav_header_link:hover{
-    background-color: #74afed;
+    background-color: #48b9ff;
     color: white;
     transition: .17s all ease;
 }
@@ -113,7 +118,7 @@ body{
 }
 
 .nav_element:hover{
-    background-color: #74afed;
+    background-color: #48b9ff;
     color: white;
     transition: .17s all ease;
 }
@@ -148,7 +153,7 @@ body{
 
 .details{
     margin: 5px 0px;
-    border-bottom: 1px solid #74afed;
+    border-bottom: 1px solid #48b9ff;
     
     text-align: left;
     cursor: pointer;
@@ -157,10 +162,20 @@ body{
     padding: 5px 8px;
     text-decoration: none;
 }
-.details:hover{
-    background-color: #74afed;
+.details:hover, .details_btn_wrap:hover{
+    background-color: #48b9ff;
     color: white;
     transition: .17s all ease;
+}
+.details_btn_wrap{
+    cursor: pointer;
+    text-align: center;
+    padding: 5px 8px;
+    border: 1px solid #48b9ff;
+    color: #000;
+    display: block;
+    width: 135px;
+    margin: 0 auto
 }
 .route_details{
     display: none;
@@ -377,7 +392,7 @@ body{
         margin-right: 10px;
         background-color: #fff;
         text-align: center;
-        border-bottom: 1px solid #74afed;
+        border-bottom: 1px solid #48b9ff;
         border-radius: 1px;
         display: inline-block;
         vertical-align: 50%;

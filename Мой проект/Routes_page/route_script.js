@@ -43,7 +43,6 @@ function scrollBtnDownClick(){
 }
 
 
-
 //при клике на Подробнее открывается параграф
 function Details_click(a){
     if (routeDetails[a].style.display != 'block'){

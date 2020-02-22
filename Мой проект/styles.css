@@ -140,6 +140,7 @@ body{
     margin: 10px auto;
 }
 
+
 /*------------------SIDE-----------------*/
 
 .anchor_button{
@@ -208,7 +209,10 @@ body{
     margin:0 0 5px 15px;
     
 }
-
+.slider_headline_link{
+    text-decoration: none;
+     color: black;
+}
 .button_img{
     height: 25px;
     top: 50%;
