@@ -5,42 +5,44 @@ errorblock = document.getElementById('error');
 errorblock.hidden = true;
 //Функция поиска
 document.querySelector("#search_form").oninput= function(){
-
   let headlines = document.getElementsByClassName("item_headline");
   let blocks = document.querySelectorAll('#catalog > div');
-  //console.log(global_hidden_Elems.includes(blocks[0]));
+  for(let i = 0; i<blocks.length; i++){
+    blocks[i].headline = headlines[i];
+  }
+  blocks = Array.from(blocks).filter((block)=>{
+    if(block.classList.contains('block_hidden')){
+      return false;
+    }else{
+      return true;
+    }
+  });
+console.log(blocks.length);
+console.log(blocks[0].headline.innerText);
   let val = this.value.split(' ').join('').toLowerCase();
   if(val != ''){
-    for(let i = 0; i< headlines.length; i++){
-      if(headlines[i].innerText.toLowerCase().includes(val)
-       && global_hidden_Elems!=0 && global_hidden_Elems.includes(blocks[i]) == false
-       ){
-        blocks[i].style.display = 'block';
+    for(let i = 0; i< blocks.length; i++){
+      if(blocks[i].headline.innerText.toLowerCase().includes(val)){
+        blocks[i].hidden = false;
       }
-      else if(headlines[i].innerText.toLowerCase().includes(val)
-      && global_hidden_Elems ==0){
-        blocks[i].style.display = 'block';
-       }
-       else{
-        blocks[i].style.display = 'none';
-       }
+      else{
+        blocks[i].hidden = true;
+      }
     }
     
-  }else if(global_checkboxes != []){
+  }else{
     blocks.forEach((item)=>{
-      item.style.display = 'block';
-    });
-    return change();
-  }
-  else{
-    blocks.forEach((item)=>{
-      item.style.display = 'block';
+      item.hidden = false;
     })
+    
     errorblock.hidden = true;
+    return change();
   }
    if(Array.from(blocks).every(item => item.hidden == true)){
      errorblock.hidden = false;
     }
+    
+
   }
 //закрыть фильтры
 function closeit(){
@@ -120,7 +122,7 @@ function change() {
       theme: getClassOfCheckedCheckboxes(themeArr),
 
     };
-  
+    
     filterResults(filters);
 }
 
@@ -147,6 +149,18 @@ function filterResults(filters) {
 
   let hiddenElems = [];
 
+  let hiddenBySearch = document.querySelectorAll('#catalog > div[hidden]');
+  console.log(hiddenBySearch);
+  if(hiddenBySearch != [] || hiddenBySearch!=0){
+    rElems=Array.from(rElems).filter((elem)=>{
+      if(elem.hasAttribute('hidden')){
+        return false;
+      }else{
+        return true;
+      }
+    })
+  }
+  console.log(rElems);
   if (!rElems || rElems.length <= 0) {
     return;
   }
@@ -244,7 +258,7 @@ function filterResults(filters) {
     //===============================//
   }
   for (let i = 0; i < rElems.length; i++) {
-    rElems[i].style.display = "block";
+    rElems[i].classList.remove('block_hidden');
   }
 
   if (hiddenElems.length <= 0) {
@@ -252,11 +266,13 @@ function filterResults(filters) {
   }
 
   for (let i = 0; i < hiddenElems.length; i++) {
-    hiddenElems[i].style.display = "none";
+    hiddenElems[i].classList.add('block_hidden');
   }
   global_hidden_Elems = hiddenElems;
-  
+  console.log(global_checkboxes);
+console.log(global_hidden_Elems);
 }
+
 function filter_clear(){
   let controlArr = document.getElementsByClassName('checkbox');
   controlArr = Array.from(controlArr); 

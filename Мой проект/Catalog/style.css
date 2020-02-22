@@ -358,6 +358,9 @@ input{
     margin: 15px auto; 
     font-size: 22px;
 } 
+.block_hidden{
+    display: none;
+} 
 /*--------------------CheckboxStyle------------------*/
 
 
@@ -553,6 +556,9 @@ input{
         border-radius: 1px;
         display: inline-block;
         vertical-align: 50%;
+    }
+    input{
+        width: calc(100% - 35px);
     }
     /*--------------Filter-----------------*/
     #filter{
