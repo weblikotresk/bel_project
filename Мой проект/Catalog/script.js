@@ -7,6 +7,7 @@ errorblock.hidden = true;
 let input_value = '';
 let input = document.querySelector("#search_form");
 input.addEventListener('input', search);
+
 function search(){
   let headlines = document.getElementsByClassName("item_headline");
   let blocks = document.querySelectorAll('#catalog > div');
@@ -25,29 +26,27 @@ function search(){
   let val = input.value.split(' ').join('').toLowerCase();
    input_value = val;
   if(val != ''){
+    
     for(let i = 0; i< blocks.length; i++){
-      if(blocks[i].headline.innerText.toLowerCase().includes(val)){
+      if(blocks[i].headline.innerText.split(' ').join('').toLowerCase().includes(val)){
         blocks[i].hidden = false;
       }
       else{
         blocks[i].hidden = true;
       }
     }
-    
-  }else{
-    blocks.forEach((item)=>{
-      item.hidden = false;
-    })
-    
-    errorblock.hidden = true;
-    return change();
-  }
-   if(Array.from(blocks).every(item => item.hidden == true)){
-     errorblock.hidden = false;
+    if(Array.from(blocks).every(item => item.hidden == true)){
+        errorblock.hidden = false;
+    }else{
+      errorblock.hidden = true;
     }
-    
-
+   }
+   
+  else{
+     blocks.forEach((item)=>{item.hidden = false});
+     errorblock.hidden = true;  
   }
+}
 //закрыть фильтры
 function closeit(){
   body.classList.remove('closed');
@@ -255,7 +254,6 @@ function filterResults(filters) {
           break;
         }
       }
-
       if (isHidden) {
         hiddenElems.push(el);
       }
@@ -300,6 +298,7 @@ function filter_clear(){
 //очистка поля для ввода
 function clearInput(){
   input.value = '';
+  errorblock.hidden = true;
   return search();
 }
 //при клике на Материал взят из следующих источников: открывается список
