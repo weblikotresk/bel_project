@@ -4,9 +4,13 @@ global_hidden_Elems=0,global_checkboxes=[],
 errorblock = document.getElementById('error');
 errorblock.hidden = true;
 //Функция поиска
-document.querySelector("#search_form").oninput= function(){
+let input_value = '';
+let input = document.querySelector("#search_form");
+input.addEventListener('input', search);
+function search(){
   let headlines = document.getElementsByClassName("item_headline");
   let blocks = document.querySelectorAll('#catalog > div');
+
   for(let i = 0; i<blocks.length; i++){
     blocks[i].headline = headlines[i];
   }
@@ -17,9 +21,9 @@ document.querySelector("#search_form").oninput= function(){
       return true;
     }
   });
-console.log(blocks.length);
-console.log(blocks[0].headline.innerText);
-  let val = this.value.split(' ').join('').toLowerCase();
+
+  let val = input.value.split(' ').join('').toLowerCase();
+   input_value = val;
   if(val != ''){
     for(let i = 0; i< blocks.length; i++){
       if(blocks[i].headline.innerText.toLowerCase().includes(val)){
@@ -122,7 +126,7 @@ function change() {
       theme: getClassOfCheckedCheckboxes(themeArr),
 
     };
-    
+
     filterResults(filters);
 }
 
@@ -150,7 +154,7 @@ function filterResults(filters) {
   let hiddenElems = [];
 
   let hiddenBySearch = document.querySelectorAll('#catalog > div[hidden]');
-  console.log(hiddenBySearch);
+
   if(hiddenBySearch != [] || hiddenBySearch!=0){
     rElems=Array.from(rElems).filter((elem)=>{
       if(elem.hasAttribute('hidden')){
@@ -160,7 +164,7 @@ function filterResults(filters) {
       }
     })
   }
-  console.log(rElems);
+
   if (!rElems || rElems.length <= 0) {
     return;
   }
@@ -227,7 +231,7 @@ function filterResults(filters) {
 
       for (let j = 0; j < filters.place.length; j++) {
         let filter = filters.place[j];
-
+        
         if (el.classList.contains(filter)) {
           isHidden = false;
           break;
@@ -237,6 +241,7 @@ function filterResults(filters) {
       if (isHidden) {
         hiddenElems.push(el);
       }
+      
     }
     //===============================//
     if (filters.theme.length > 0) {
@@ -255,6 +260,7 @@ function filterResults(filters) {
         hiddenElems.push(el);
       }
     }
+    
     //===============================//
   }
   for (let i = 0; i < rElems.length; i++) {
@@ -269,14 +275,15 @@ function filterResults(filters) {
     hiddenElems[i].classList.add('block_hidden');
   }
   global_hidden_Elems = hiddenElems;
-  console.log(global_checkboxes);
-console.log(global_hidden_Elems);
+
+// проверка если есть что-то в поисковой строке
+if(input_value != '' ){
+  return search();
+}
 }
 
 function filter_clear(){
-  let controlArr = document.getElementsByClassName('checkbox');
-  controlArr = Array.from(controlArr); 
-  console.log(controlArr);
+  let controlArr = Array.from(document.getElementsByClassName('checkbox'));
   for(let i = 0; i<global_checkboxes.length; i++){
     global_checkboxes[i].forEach((item)=>{
       item.checked = false;
@@ -289,4 +296,25 @@ function filter_clear(){
   )
   return change();
   
+}
+//очистка поля для ввода
+function clearInput(){
+  input.value = '';
+  return search();
+}
+//при клике на Материал взят из следующих источников: открывается список
+let sources = document.querySelector('.sources_list'),
+source_Text = document.querySelector('#sources');
+
+function source(){
+  if (sources.style.display != 'block'){
+      //если параграф скрыт
+      source_Text.style.color= "#48b9ff";
+      sources.style.display = 'block';
+  }else{
+      //если параграф открыт
+      source_Text.style.color= "#b3b3b3";
+      sources.style.display = 'none';
+
+  }
 }
