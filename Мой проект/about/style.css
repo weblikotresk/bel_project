@@ -1,55 +1,13 @@
 /*-----------------GENERALS---------------------*/
 #header{
-    -ms-grid-row: 1;
-    grid-row: 1;
-    -ms-grid-column: 1;
-    grid-column: 1;
-    -ms-grid-column-span: 5;
-    grid-area: header;
     position: relative;
-    
 }
-#nav{
-    -ms-grid-row: 3;
-    grid-row: 3;
-    -ms-grid-column: 1;
-    grid-column: 1;
-    grid-area: nav;
-    margin-left: 15px;
-    list-style: none;
-    padding: 0;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-            flex-direction: column;
-}
+
 #article{
-    -ms-grid-row: 3;
-    grid-row: 3;
-    -ms-grid-column: 3;
-    grid-column: 3;
-    grid-area: article;
-    margin-top: 20px;
+    margin: 20px;
 }
-#side{
-    -ms-grid-row: 3;
-    grid-row: 3;
-    -ms-grid-column: 5;
-    grid-column: 5;
-    grid-area: side;
-}
+
 #footer{
-    -ms-grid-row: 5;
-    grid-row: 5;
-    -ms-grid-column: 1;
-    grid-column: 1;
-    -ms-grid-column-span: 5;
-    grid-area: footer;
     -webkit-box-shadow: 0px -9px 37px -22px rgba(77,77,77,1);
             box-shadow: 0px -9px 37px -22px rgba(77,77,77,1);
     background: url("../img/footer/footer3.jpg") no-repeat center / cover;
@@ -59,19 +17,8 @@
     
 }
 body{
-    display: -ms-grid;
-    display: grid;
-        grid-template-areas: 
-    "header header header"
-    "nav article side"
-    "footer footer footer";
-    -ms-grid-rows: 110px 3vh 1fr 3vh 60px;
-    grid-template-rows: 110px 1fr 60px;
-    -ms-grid-columns: 20% 3vh 1fr 3vh 15%;
-    grid-template-columns: 20% 1fr 15%;
     font-family: 'Nunito', sans-serif;
     height: 100%;
-    grid-gap: 3vh;
     margin: 0 auto;
     
 }
@@ -127,6 +74,7 @@ body{
     color: #4d4d4d;
     
 }
+
 .nav_header_link{
     background-color: rgba(255, 255, 255, 0.25);
     text-decoration: none;
@@ -209,8 +157,9 @@ body{
 .specifications{
     width: 80%;
     font-weight: 600;
-    margin: auto 10px;
-    list-style: none; 
+    padding: 0;
+    margin: auto 5px;
+    list-style: none;
 }
 .specifications > li{
     margin-bottom: 10px;
@@ -218,41 +167,13 @@ body{
 .specifications > li > span{
     font-weight: bold;
 }
-.specifications > li > a{
-    color: black;
-    text-decoration: none;
-}
-.specifications > li > a:hover{
-    border-bottom: 1px solid #48b9ff;
-}
+
 .desc_image{
     width: 70%;
     display: block;
     margin: 10px auto;
 }
 
-
-/*------------------SIDE-----------------*/
-
-.anchor_button{
-    position: fixed;
-    bottom: 25px;
-    right: 25px;
-    width: 25px;
-    background-color: white;
-    padding: 5px;
-    -webkit-transition: all .15s ease;
-    -o-transition: all .15s ease;
-    transition: all .15s ease;
-    display: none;
-}
-.anchor_button:hover{
-    -webkit-box-shadow: 0px 0px 13px 1px rgba(0,0,0,0.25);
-    box-shadow: 0px 0px 13px 1px rgba(0,0,0,0.25);
-    cursor: pointer;
-}
-
-/*----------------------Transport---------------------------*/
 
 
 /*---------------------FOOTER--------------------------*/
@@ -351,70 +272,12 @@ body{
     
 }
 /*--------------------Media_Queries----------------*/
-
-@media screen and (max-width:760px){
-    .header_flex{
-        padding-top: 15px;
-    }
-    .logo_wrap{
-        margin-bottom: 25px;
-        height: unset;
-    }
-    .logo{
-        height: 86px;
-    }
-    .logo_headline{
-        width: 400px;
-        text-align: left;
-        padding-left: 10px;
-        border-left: 2px solid #dbdbdb;
-    }
-    .nav_header_link{
-        margin: 0 5px 5px 0;
-        
-    }
-
-     #footer{
-         -webkit-flex-wrap: wrap;
-             -ms-flex-wrap: wrap;
-                 flex-wrap: wrap;
-     }
-     .footer_section_headline{
-         margin-bottom: 2%;
-     }
-     .footer_nav_element{
-         margin-top: 4%;
-         
-     }
-
-     .footer_section:last-child .footer_section_headline{
-         display: none;
-     }
-      .icons_wrap{
-          width: 75%;
-      }
-
-
-}
-@media screen and (max-width:888px){
-    #nav{
-        display: none;
-    }
-    .home_page_headline{
-        font-size: 1.2rem;
-    }
-}
 @media screen and (max-width:1350px){
     body{
         display:block;
         margin: 0 auto;
     }
-    p{
-        text-align: center;
-        width: 75%;
-        margin: 5px auto 15px auto;
-        
-    }
+
     .home_page_headline{
         text-align: center;
     }
@@ -446,44 +309,63 @@ body{
     .nav_header_link{
         display: block;
         
-        margin: 0 10px 10px 0;
+        margin: 0 15px 15px 0;
         width: 22%;
         
     }
 
-    #nav{
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-        -webkit-flex-direction: row;
-            -ms-flex-direction: row;
-                flex-direction: row;
-        margin: 25px auto 0px;
-        -webkit-box-pack: space-evenly;
-        -webkit-justify-content: space-evenly;
-            -ms-flex-pack: space-evenly;
-                justify-content: space-evenly;
-        width: 75%;
+}
+@media screen and (max-width:888px){
+    .home_page_headline{
+        font-size: 1.2rem;
     }
-    
-    .nav_headline{
-        display: none;
+}
+
+@media screen and (max-width:760px){
+    .header_flex{
+        padding-top: 15px;
+    }
+    .logo_wrap{
+        height: unset;
+        margin: 0 0 25px 55px;
+    }
+    .logo{
+        height: 86px;
+    }
+    .logo_headline{
+        width: 400px;
+        text-align: left;
+        padding-left: 10px;
+        
+    }
+    .nav_header_link{
+        width: 33%;
     }
 
-    .nav_element{
-        padding:5px;
-        margin-right: 10px;
-        background-color: #fff;
-        text-align: center;
-        border-bottom: 1px solid #48b9ff;
-        border-radius: 1px;
-        display: inline-block;
-        vertical-align: 50%;
-    }
+     #footer{
+         -webkit-flex-wrap: wrap;
+             -ms-flex-wrap: wrap;
+                 flex-wrap: wrap;
+     }
+     .footer_section_headline{
+         margin-bottom: 2%;
+     }
+     .footer_nav_element{
+         margin-top: 4%;
+         
+     }
+
+     .footer_section:last-child .footer_section_headline{
+         display: none;
+     }
+      .icons_wrap{
+          width: 75%;
+      }
+
 
 }
 
-  
-@media screen and (max-width:500px){
+@media screen and (max-width:560px){
     .logo{
         top: 2vw;
         height: 14vw;
