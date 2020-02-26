@@ -373,7 +373,7 @@ body{
     border-bottom: 1px solid #48b9ff;
 }
 .filter_clear{
-    cursor: pointer;
+    
     display: block;
     padding: 10px 0;
     text-align: center;
@@ -433,6 +433,7 @@ body.closed:after{
     display: none; /* в медийке block*/
 }
 .close_click {
+    cursor: pointer;
     stroke:#fff;
     fill:#fff;
     fill-opacity:0;

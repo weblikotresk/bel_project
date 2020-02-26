@@ -273,13 +273,20 @@ function filterResults(filters) {
     hiddenElems[i].classList.add('block_hidden');
   }
   global_hidden_Elems = hiddenElems;
-
+  //проверка пустого блока
+ if(hiddenElems.length >= rElems.length){
+   console.log(hiddenElems, rElems);
+   errorblock.hidden = false;
+ }else{
+  console.log(hiddenElems, rElems);
+  errorblock.hidden = true;
+ }
 // проверка если есть что-то в поисковой строке
 if(input_value != '' ){
   return search();
 }
 }
-
+// очистить фильтры
 function filter_clear(){
   let controlArr = Array.from(document.getElementsByClassName('checkbox'));
   for(let i = 0; i<global_checkboxes.length; i++){
@@ -292,6 +299,9 @@ function filter_clear(){
   controlArr.forEach(item=>
     item.style.backgroundColor = "#fff"
   )
+  if(errorblock.hidden == false){
+    errorblock.hidden = true;
+  }
   return change();
   
 }
