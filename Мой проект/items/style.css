@@ -43,7 +43,7 @@
     grid-column: 5;
     grid-area: side;
 }
-html.webplossless #footer{
+.webplossless #footer{
     background: url("../img/webp/footer/footer3.webp") no-repeat center / cover;
 }
 
