@@ -1,5 +1,4 @@
 
-
 let 
 sources = document.querySelector('.sources_list'),
 source_Text = document.querySelector('#sources'),
