@@ -43,6 +43,9 @@
     grid-column: 5;
     grid-area: side;
 }
+html.webplossless #footer{
+    background: url("../img/webp/footer/footer3.webp") no-repeat center / cover;
+}
 #footer{
     -ms-grid-row: 5;
     grid-row: 5;
@@ -58,9 +61,7 @@
     color: white;
     
 }
-html.webplossless #footer{
-    background: url("../img/webp/footer/footer3.webp") no-repeat center / cover;
-}
+
 
 body{
     display: -ms-grid;
