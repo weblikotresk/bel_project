@@ -1,15 +1,13 @@
 
-let 
-sources = document.querySelector('.sources_list'),
+let sources = document.querySelector('.sources_list'),
 source_Text = document.querySelector('#sources'),
-
 anchorBtnUp = document.getElementsByClassName('anchor_button')[0],
 anchorBtnDown = document.getElementsByClassName('anchor_button')[1];
 
-anchorBtnUp.addEventListener('click', scrollBtnUpClick)
-anchorBtnDown.addEventListener('click', scrollBtnDownClick)
-window.addEventListener('scroll', scrollDown)
-window.addEventListener('scroll', scrollUp)
+anchorBtnUp.addEventListener('click', scrollBtnUpClick);
+anchorBtnDown.addEventListener('click', scrollBtnDownClick);
+window.addEventListener('scroll', scrollDown);
+window.addEventListener('scroll', scrollUp);
 function scrollUp(){
     //для кнопки вверх
     if(( pageYOffset)<document.documentElement.clientHeight){
@@ -38,7 +36,7 @@ function scrollBtnDownClick(){
         document.body.scrollHeight, document.documentElement.scrollHeight,
         document.body.offsetHeight, document.documentElement.offsetHeight,
         document.body.clientHeight, document.documentElement.clientHeight)
-      );
+      )
 }
 
 
