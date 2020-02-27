@@ -58,6 +58,10 @@
     color: white;
     
 }
+html.webplossless #footer{
+    background: url("../img/webp/footer/footer3.webp") no-repeat center / cover;
+}
+
 body{
     display: -ms-grid;
     display: grid;

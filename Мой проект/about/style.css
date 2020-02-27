@@ -16,6 +16,10 @@
     color: white;
     
 }
+html.webplossless #footer{
+    background: url("../img/webp/footer/footer3.webp") no-repeat center / cover;
+}
+
 body{
     font-family: 'Nunito', sans-serif;
     height: 100%;
