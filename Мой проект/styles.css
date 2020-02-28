@@ -507,7 +507,48 @@ body{
         font-size: 1.2rem;
     }
 }
+@media screen and (max-width: 1100px){
 
+}/*--------------Slider-----------------*/
+
+    #showplaces{
+        width: 62%;
+        margin: 20px auto 65px;
+    }
+     .home_page_headline{
+        font-size: 2rem;
+    }
+    .slider_element{
+        width: 100%;
+    }
+
+    .slider_element_img{
+        margin: 0 auto;
+        display:block;
+        width:30%;
+        height: 30%;
+    }
+    .slider_element_headline{
+        text-align: center;
+        font-size: 1.25rem;
+    }
+
+    .slider_element_text{
+        text-align: center;
+        margin: 10px auto;
+    }
+    .slider_element .link{
+        display: block;
+        text-align: center;
+        font-size: 1.2rem;
+    }
+    .nav_header_link{
+        display: block;
+        
+        margin: 0 10px 10px 0;
+        width: 33%;
+        
+    }
 
 @media screen and (max-width: 1350px){
 body{
@@ -552,7 +593,7 @@ body{
         display: block;
         
         margin: 0 10px 10px 0;
-        width: 33%;
+        width: 22%;
         
     }
 
@@ -584,46 +625,7 @@ body{
         display: inline-block;
         vertical-align: 50%;
     }
-    /*--------------Slider-----------------*/
-
-    #showplaces{
-        width: 62%;
-        margin: 20px auto 65px;
-    }
-     .home_page_headline{
-        font-size: 2rem;
-    }
-    .slider_element{
-        width: 100%;
-    }
-
-    .slider_element_img{
-        margin: 0 auto;
-        display:block;
-        width:30%;
-        height: 30%;
-    }
-    .slider_element_headline{
-        text-align: center;
-        font-size: 1.25rem;
-    }
-
-    .slider_element_text{
-        text-align: center;
-        margin: 10px auto;
-    }
-    .slider_element .link{
-        display: block;
-        text-align: center;
-        font-size: 1.2rem;
-    }
-    .nav_header_link{
-        display: block;
-        
-        margin: 0 10px 10px 0;
-        width: 22%;
-        
-    }
+    
 }
 @media screen and (max-width:500px){
     .logo{
