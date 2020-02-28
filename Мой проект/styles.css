@@ -507,8 +507,10 @@ body{
         font-size: 1.2rem;
     }
 }
-@media screen and (max-width:1100px){
-    body{
+
+
+@media screen and (max-width: 1350px){
+body{
         display:block;
         margin: 0 auto;
     }
@@ -615,8 +617,6 @@ body{
         text-align: center;
         font-size: 1.2rem;
     }
-}
-@media screen and (max-width: 1350px){
     .nav_header_link{
         display: block;
         
