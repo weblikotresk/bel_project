@@ -124,6 +124,10 @@ body{
 .home_page_headline, .logo_headline, .route_headline{
     font-family: 'Source Sans Pro', sans-serif;
 }
+.home_page_headline{
+    display: block;
+    margin: 15px 5px;
+}
 .logo_headline{
     font-size:32px;
     border-left: 2px solid #f5f5f5ec;
@@ -464,6 +468,9 @@ body{
 @media screen and (max-width:888px){
     #nav{
         display: none;
+    }
+    .home_page_headline{
+        font-size: 1.4rem;
     }
 }
 @media screen and (max-width:760px){

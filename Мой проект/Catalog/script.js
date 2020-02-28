@@ -277,10 +277,8 @@ function filterResults(filters) {
   global_hidden_Elems = hiddenElems;
   //проверка пустого блока
  if(hiddenElems.length >= rElems.length){
-   console.log(hiddenElems, rElems);
    errorblock.hidden = false;
  }else{
-  console.log(hiddenElems, rElems);
   errorblock.hidden = true;
  }
 // проверка если есть что-то в поисковой строке

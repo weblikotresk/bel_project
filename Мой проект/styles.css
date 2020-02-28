@@ -550,12 +550,7 @@ body{
             text-align: center;
             font-size: 1.2rem;
         }
-        .nav_header_link{
-            display: block;
-            margin: 0 10px 10px 0;
-            width: 33%;
-            
-        }
+
         .nav_element{
             width: 30%;
         }

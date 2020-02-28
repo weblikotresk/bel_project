@@ -110,6 +110,10 @@ body{
 .home_page_headline, .logo_headline{
     font-family: 'Source Sans Pro', sans-serif;
 }
+.home_page_headline{
+    display: block;
+    margin: 15px 5px;
+}
 .logo_wrap{
     height:86px; 
 }
@@ -475,7 +479,7 @@ body{
     }
 
     .home_page_headline{
-        font-size: 1.2rem;
+        font-size: 1.4rem;
     }
 
 }
