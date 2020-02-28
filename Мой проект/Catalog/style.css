@@ -34,7 +34,7 @@ font-family: 'Nunito', sans-serif;*/
     grid-column: 5;
     grid-area: side;
 }
-html.webplossless #footer{
+.webplossless #footer{
     background: url("../img/webp/footer/footer3.webp") no-repeat center / cover;
 }
 #footer{
@@ -75,7 +75,6 @@ body{
     max-width:775px;
     width:100%; 
     margin: 0 auto;
-    
 }
 
 /*-----------------------HEADER-------------------*/
@@ -170,7 +169,6 @@ body{
 /*------------------NAVIGATION-------------------------*/
 .nav{
     list-style: none;
-    
     padding: 0;
     display: -webkit-box;
     display: -webkit-flex;
@@ -289,7 +287,6 @@ body{
     text-decoration: none;
 }
 
-
 .details:hover{
     background-color: #48b9ff;
     color: white;
@@ -319,9 +316,6 @@ body{
     text-decoration: none;
 }
 
-
-
-
 /*--------------------Filter-----------------------*/
 #filter{
     display: block;
@@ -336,6 +330,7 @@ body{
     background-color: #74aeedaf;
     color: #fff;
     border-radius: 10px;
+    cursor: pointer;
 }
 .filter_unwrap:hover{
     -webkit-transition: .17s all ease;
@@ -386,6 +381,7 @@ body{
     -webkit-box-shadow: 0px 0px 2px 2px rgba(219,219,219,0.29);
     box-shadow: 0px 2px 2px 2px rgba(219,219,219,0.29);
     border-radius: 4px;
+    cursor: pointer;
 }
 .filter_clear:hover{
     background-color: #48b9ff;
