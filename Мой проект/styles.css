@@ -121,12 +121,16 @@ body{
 }
 .logo{
     height: 42px;
+    cursor: pointer;
     position: relative;
     top: 10px;
     right: 5px;
 }
-.logo:hover{
-    cursor: pointer;
+
+.home_page_headline{
+    display: block;
+
+    margin: 15px 5px;
 }
 .home_page_headline, .logo_headline{
     font-family: 'Source Sans Pro', sans-serif;
@@ -521,9 +525,7 @@ body{
             width: 62%;
             margin: 20px auto 65px;
         }
-         .home_page_headline{
-            font-size: 2rem;
-        }
+
         .slider_element{
             width: 100%;
         }
@@ -531,7 +533,7 @@ body{
         .slider_element_img{
             margin: 0 auto;
             display:block;
-            width:30%;
+            width:50%;
             height: 30%;
         }
         .slider_element_headline{
@@ -563,16 +565,16 @@ body{
     #nav{
         display: none;
     }
-    .home_page_headline{
-        font-size: 1.2rem;
-    }
+     .home_page_headline{
+        font-size: 1.4em;
+    } 
 }
 @media screen and (max-width:760px){
     .header_flex{
         padding-top: 15px;
     }
     .logo_wrap{
-        margin-bottom: 25px;
+        margin: 0 0 25px 55px;
         height: unset;
     }
     .logo{
@@ -584,7 +586,7 @@ body{
         padding-left: 10px;
     }
     .nav_header_link{
-        margin: 0 5px 5px 0;
+        width: 33%;
         
     }
   
@@ -597,7 +599,7 @@ body{
     }
     #weather .home_page_paragragh{
         width: 100%;
-        text-align:center;
+        text-align: center;
     }
     #weather .home_page_paragragh span{
         position: static;
@@ -629,7 +631,7 @@ body{
 
 
 }
-@media screen and (max-width:500px){
+@media screen and (max-width:560px){
     .logo{
        
         top: 2vw;
@@ -645,9 +647,7 @@ body{
         font-size: 5vw;
         width: 55%;
     }
-     .home_page_headline{
-        font-size: 1.2rem;/*!!!!!!!!!!!*/
-    }
+
     .header_flex{
         padding-top: 15px;
     }
