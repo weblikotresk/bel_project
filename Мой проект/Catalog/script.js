@@ -275,12 +275,7 @@ function filterResults(filters) {
     hiddenElems[i].classList.add('block_hidden');
   }
   global_hidden_Elems = hiddenElems;
-  //проверка пустого блока
- if(hiddenElems.length >= rElems.length){
-   errorblock.hidden = false;
- }else{
-  errorblock.hidden = true;
- }
+
 // проверка если есть что-то в поисковой строке
 if(input_value != '' ){
   return search();
