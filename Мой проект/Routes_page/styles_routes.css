@@ -194,6 +194,28 @@ body{
     display: block;
     margin: 10px auto;
 }
+.corona{
+    width: 100%;
+    -webkit-box-shadow: 0px 0px 13px 1px rgba(0,0,0,0.2);
+    box-shadow: 0px 0px 13px 1px rgba(0,0,0,0.2);
+    border-radius: 10px;
+}
+.corona_paragraph{
+    padding: 20px;
+}
+.warning_img{
+    width: 8px;
+    margin-right: 5px;
+}
+.link{
+    text-decoration: none;
+    color:#48b9ff;
+}
+
+.link:hover{
+    color:#4e9bee;
+}
+
 /*-------------------ROUTE-----------------------*/
 
 .arrow_down{
@@ -471,6 +493,10 @@ body{
     }
     .home_page_headline{
         font-size: 1.4rem;
+    }
+    .corona{
+        width: 88%;
+        margin: 0 auto;
     }
 }
 @media screen and (max-width:760px){
