@@ -55,3 +55,36 @@ function source(){
     }
 }
 
+// Set the date we're counting down to
+let countDownDate = new Date("Feb 16, 2021 00:00:00").getTime(),
+rights = document.getElementsByClassName('footer_rights')[0].innerHTML,
+now = new Date().getTime();
+if (now >= 1609448400000){
+    document.getElementsByClassName('footer_rights')[0].innerHTML = 'Copyright © Владислав Климов 2020-2021. Все права защищены.';
+}
+
+
+
+document.body.onload = function(){
+    let countdown = document.createElement('div');
+    countdown.classList.add('footer_countdown');
+    
+    let footer_bottom = document.getElementsByClassName("footer_rights")[0];
+    footer_bottom.prepend(countdown);
+    // Update the count down every 1 second
+
+    let x = setInterval(function() {
+        let now = new Date().getTime();
+        let distance = countDownDate - now;
+        // Time calculations for days, hours, minutes and seconds
+        let days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+    
+        countdown.innerHTML = 'Поддержка сайта закончится через ' + days + "д " + hours + "ч "
+        + minutes + "м " + seconds + "с.";
+    
+  });
+}

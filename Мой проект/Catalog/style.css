@@ -663,7 +663,10 @@ fill-opacity:0;
     width: 33%;
 }
 
-
+.footer_countdown{
+    color:#adadad;
+    padding-bottom: 10px;
+}
 /*--------------------Media_Queries----------------*/
 @media screen and (min-width:1350px){
     body:after, body.closed:after{

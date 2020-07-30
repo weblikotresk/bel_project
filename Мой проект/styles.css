@@ -72,10 +72,12 @@
 body{
     display: -ms-grid;
     display: grid;
-            grid-template-areas: 
+
+    grid-template-areas: 
     "header header header"
     "nav article side"
     "footer footer footer";
+    
     -ms-grid-rows: 110px 3vh 1fr 3vh 60px;
     grid-template-rows: 110px 1fr 60px;
     -ms-grid-columns: 20% 3vh 1fr 3vh 15%;
@@ -452,7 +454,10 @@ body{
     background-color: #474747;
     
 }
-
+.footer_countdown{
+    color:#adadad;
+    padding-bottom: 10px;
+}
 /*--------------------Media_Queries----------------*/
 
 @media screen and (max-width:1350px){
@@ -602,7 +607,7 @@ body{
         width: 33%;
         
     }
-  
+  /*7689*/
     #weather{
         display: block;
     }
@@ -616,9 +621,7 @@ body{
     }
     #weather .home_page_paragragh span{
         position: static;
-        
-         
-     }
+    }
      #footer{
          -webkit-flex-wrap: wrap;
              -ms-flex-wrap: wrap;

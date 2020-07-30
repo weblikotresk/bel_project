@@ -401,6 +401,10 @@ body{
     background-color: #474747;
     
 }
+.footer_countdown{
+    color:#adadad;
+    padding-bottom: 10px;
+}
 /*--------------------Media_Queries----------------*/
 @media screen and (max-width:1350px){
     body{

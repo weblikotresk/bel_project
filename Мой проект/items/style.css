@@ -383,7 +383,10 @@ body{
     display: flex;
     width: 33%;
 }
-
+.footer_countdown{
+    color:#adadad;
+    padding-bottom: 10px;
+}
 /*--------------------Media_Queries----------------*/
 
 @media screen and (max-width:1350px){
